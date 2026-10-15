@@ -83,10 +83,10 @@ export default function NewsletterPopup() {
         <div
           role="dialog"
           aria-labelledby="newsletter-title"
-          className="modal-in pointer-events-auto relative grid w-full max-w-[52rem] overflow-hidden rounded-[2rem] bg-cream shadow-phone sm:grid-cols-[0.95fr_1.05fr] sm:rounded-[2.5rem]"
+          className="modal-in pointer-events-auto relative grid w-full max-w-[52rem] overflow-hidden rounded-[2rem] border-2 border-cocoa-900 bg-cream shadow-[8px_10px_0_0_#2A1A17,0_40px_80px_-24px_rgba(42,26,23,0.55)] sm:grid-cols-[0.95fr_1.05fr] sm:rounded-[2.5rem]"
         >
           {/* photo */}
-          <div className="relative h-36 sm:h-auto sm:min-h-[30rem]">
+          <div className="relative h-36 border-b-2 border-cocoa-900 sm:h-auto sm:min-h-[30rem] sm:border-b-0 sm:border-r-2">
             <Image
               src="/images/portrait.jpg"
               alt="Elena smiling"
@@ -95,7 +95,7 @@ export default function NewsletterPopup() {
               className="object-cover object-[50%_25%]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-cocoa-900/40 via-transparent to-transparent" />
-            <span className="absolute bottom-4 left-4 hidden -rotate-6 rounded-full bg-butter px-3 py-1.5 text-xs font-semibold text-cocoa-900 shadow-sticker sm:inline-flex">
+            <span className="absolute bottom-4 left-4 hidden -rotate-6 rounded-full border-2 border-cocoa-900 bg-butter px-3 py-1.5 text-xs font-semibold text-cocoa-900 shadow-sticker sm:inline-flex">
               ★ from my inbox to yours
             </span>
             <Bow className="float-a absolute -right-3 top-5 hidden h-12 w-16 sm:block" style={{ ["--r" as string]: "12deg" }} />
@@ -142,7 +142,7 @@ export default function NewsletterPopup() {
                     placeholder="you@email.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full rounded-full border border-cocoa-900/15 bg-white px-5 py-3.5 text-cocoa-900 outline-none transition placeholder:text-cocoa-500/70 focus:border-cherry focus:ring-4 focus:ring-blush-200"
+                    className="w-full rounded-full border-2 border-cocoa-900/80 bg-white px-5 py-3.5 text-cocoa-900 outline-none transition placeholder:text-cocoa-500/70 focus:border-cherry focus:ring-4 focus:ring-blush-200"
                   />
                   {/* honeypot */}
                   <input
@@ -153,7 +153,7 @@ export default function NewsletterPopup() {
                     onChange={(e) => setNickname(e.target.value)}
                     className="absolute -left-[9999px] h-0 w-0 opacity-0"
                   />
-                  <button type="submit" disabled={status === "sending"} className="btn-cherry w-full py-4 disabled:opacity-60">
+                  <button type="submit" disabled={status === "sending"} className="btn-cherry w-full border-2 border-cocoa-900 py-4 shadow-[3px_4px_0_0_#2A1A17] disabled:opacity-60">
                     {status === "sending" ? "Joining…" : "Count me in"} <ArrowIcon />
                   </button>
                   {status === "error" && <p className="text-sm text-cherry">{error}</p>}
@@ -174,7 +174,7 @@ export default function NewsletterPopup() {
             type="button"
             onClick={close}
             aria-label="Close newsletter sign-up"
-            className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-full bg-white/85 text-2xl leading-none text-cocoa-900 shadow-sticker backdrop-blur transition hover:bg-white hover:text-cherry"
+            className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-full border-2 border-cocoa-900 bg-white text-2xl leading-none text-cocoa-900 shadow-[2px_3px_0_0_#2A1A17] transition hover:bg-white hover:text-cherry"
           >
             ×
           </button>

@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { budgetOptions, inquirySchema, serviceOptions, type InquiryInput } from "@/lib/inquiry-schema";
 import { siteConfig } from "@/lib/site.config";
 import { ArrowIcon, Cherry, MailIcon, Sparkle } from "@/components/Icons";
+import Dropdown from "@/components/Dropdown";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -13,15 +14,13 @@ export default function Contact() {
     register,
     handleSubmit,
     reset,
-    watch,
+    control,
     formState: { errors },
   } = useForm<InquiryInput>({
     resolver: zodResolver(inquirySchema),
     defaultValues: { services: [], budget: "" },
   });
 
-  const picked = watch("services") ?? [];
-  const budget = watch("budget");
   const { contact } = siteConfig;
 
   async function onSubmit(values: InquiryInput) {
@@ -43,10 +42,6 @@ export default function Contact() {
   const field =
     "w-full rounded-2xl border border-cocoa-900/15 bg-white px-4 py-3.5 text-[15px] text-cocoa-900 outline-none transition placeholder:text-cocoa-500/70 focus:border-cherry focus:ring-4 focus:ring-cherry/10";
   const errText = "mt-1.5 text-xs font-medium text-cherry";
-  const pill = (on: boolean) =>
-    `cursor-pointer select-none rounded-full border px-3.5 py-2 text-sm font-medium transition ${
-      on ? "border-cocoa-900 bg-cocoa-900 text-cream" : "border-cocoa-900/15 bg-white text-cocoa-700 hover:border-cocoa-900/40"
-    }`;
 
   return (
     <section id="contact" className="scroll-mt-20 px-3 pb-6 sm:px-5">
@@ -143,31 +138,42 @@ export default function Contact() {
                 </div>
               </div>
 
-              <fieldset>
-                <legend className="mb-2.5 text-sm font-semibold text-cocoa-900">What are you looking for?</legend>
-                <div className="flex flex-wrap gap-2">
-                  {serviceOptions.map((s) => (
-                    <label key={s} className={pill(picked.includes(s))}>
-                      <input type="checkbox" value={s} className="sr-only" {...register("services")} />
-                      {s}
-                    </label>
-                  ))}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div>
+                  <Controller
+                    name="services"
+                    control={control}
+                    render={({ field: f }) => (
+                      <Dropdown
+                        label="What are you looking for?"
+                        placeholder="Pick all that apply"
+                        options={serviceOptions}
+                        value={f.value ?? []}
+                        onChange={f.onChange}
+                        invalid={!!errors.services}
+                      />
+                    )}
+                  />
+                  {errors.services && <p className={errText}>{errors.services.message}</p>}
                 </div>
-                {errors.services && <p className={errText}>{errors.services.message}</p>}
-              </fieldset>
-
-              <fieldset>
-                <legend className="mb-2.5 text-sm font-semibold text-cocoa-900">Budget</legend>
-                <div className="flex flex-wrap gap-2">
-                  {budgetOptions.map((b) => (
-                    <label key={b} className={pill(budget === b)}>
-                      <input type="radio" value={b} className="sr-only" {...register("budget")} />
-                      {b}
-                    </label>
-                  ))}
+                <div>
+                  <Controller
+                    name="budget"
+                    control={control}
+                    render={({ field: f }) => (
+                      <Dropdown
+                        label="Budget"
+                        placeholder="Choose a range"
+                        options={budgetOptions}
+                        value={f.value ?? ""}
+                        onChange={f.onChange}
+                        invalid={!!errors.budget}
+                      />
+                    )}
+                  />
+                  {errors.budget && <p className={errText}>{errors.budget.message}</p>}
                 </div>
-                {errors.budget && <p className={errText}>{errors.budget.message}</p>}
-              </fieldset>
+              </div>
 
               <div>
                 <input placeholder="Timeline / launch date (optional)" className={field} {...register("timeline")} />

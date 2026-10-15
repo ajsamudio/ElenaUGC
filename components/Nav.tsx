@@ -14,16 +14,33 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
+  // Past the hero the bar fades out on the way down and comes back on the way up.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      const hero = document.getElementById("top");
+      const pastHero = y > (hero ? hero.offsetTop + hero.offsetHeight - 80 : window.innerHeight);
+      if (!pastHero) setHidden(false);
+      else if (Math.abs(y - lastY) > 6) setHidden(y > lastY);
+      if (Math.abs(y - lastY) > 6 || !pastHero) lastY = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const hide = hidden && !open;
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 px-3 pt-3 transition duration-500 ease-out sm:px-5 ${
+        hide ? "pointer-events-none -translate-y-4 opacity-0" : "translate-y-0 opacity-100"
+      }`}
+    >
       <nav
         className={`mx-auto flex max-w-7xl items-center justify-between rounded-full px-4 py-2.5 transition-all duration-500 sm:px-6 ${
           scrolled || open

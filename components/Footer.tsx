@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="overflow-hidden pb-28 pt-16 sm:pb-12">
       <div className="container-x">
-        <div className="flex flex-wrap items-center justify-center gap-2">
+        <div className="relative z-10 flex flex-wrap items-center justify-center gap-2">
           {socials.map((s) => (
             <a
               key={s.label}
@@ -29,7 +29,7 @@ export default function Footer() {
 
         <p
           aria-hidden
-          className="mt-10 select-none text-center font-display text-[24vw] italic leading-[0.8] tracking-tight text-cocoa-900 lg:text-[17rem]"
+          className="pointer-events-none mt-10 select-none text-center font-display text-[24vw] italic leading-[0.8] tracking-tight text-cocoa-900 lg:text-[17rem]"
         >
           {siteConfig.wordmark}
           <span className="not-italic text-cherry">★</span>
