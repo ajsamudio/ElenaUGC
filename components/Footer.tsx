@@ -1,5 +1,6 @@
 import { siteConfig } from "@/lib/site.config";
 import { InstagramIcon, MailIcon, TikTokIcon } from "@/components/Icons";
+import FooterStreams from "@/components/FooterStreams";
 
 export default function Footer() {
   const { contact } = siteConfig;
@@ -11,7 +12,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="overflow-hidden pb-28 pt-16 sm:pb-12">
+    <footer className="relative overflow-hidden pb-28 pt-16 sm:pb-12">
+      <FooterStreams />
       <div className="container-x">
         <div className="relative z-10 flex flex-wrap items-center justify-center gap-2">
           {socials.map((s) => (
@@ -29,13 +31,13 @@ export default function Footer() {
 
         <p
           aria-hidden
-          className="pointer-events-none mt-10 select-none text-center font-display text-[24vw] italic leading-[0.8] tracking-tight text-cocoa-900 lg:text-[17rem]"
+          className="footer-wordmark pointer-events-none mt-10 select-none text-center font-display text-[24vw] italic leading-[0.8] tracking-tight text-cocoa-900 lg:text-[17rem]"
         >
           {siteConfig.wordmark}
-          <span className="not-italic text-cherry">★</span>
+          <span className="footer-star not-italic text-cherry">★</span>
         </p>
 
-        <div className="mt-6 flex flex-col items-center justify-between gap-2 text-xs text-cocoa-600 sm:flex-row">
+        <div className="relative z-10 mt-6 flex flex-col items-center justify-between gap-2 text-xs text-cocoa-600 sm:flex-row">
           <p>© {new Date().getFullYear()} Elena Partida · {siteConfig.tagline}</p>
           <a href="#top" className="font-semibold hover:text-cherry">
             Back to top ↑

@@ -3,6 +3,10 @@
 // Portfolio clips, packages and FAQ live in lib/content.ts.
 // =============================================================
 
+import { compact, live } from "@/lib/live";
+
+const tt = (h: string) => live.profiles[h];
+
 export const siteConfig = {
   brandName: "elena partida",
   wordmark: "elena", // the big logo word; a ★ is drawn after it
@@ -39,10 +43,10 @@ export const siteConfig = {
     tiktokPersonalHandle: "@elenapartida",
   },
 
-  // Snapshot of public numbers (Oct 14, 2026). Refresh as she grows.
+  // TikTok numbers are live (npm run stats). Instagram is typed by hand.
   reach: [
-    { platform: "TikTok", handle: "@partidaelena", followers: "16.6K", likes: "2.3M" },
-    { platform: "TikTok", handle: "@elenapartida", followers: "6.7K", likes: "142.6K" },
+    { platform: "TikTok", handle: "@partidaelena", followers: compact(tt("partidaelena").followers), likes: compact(tt("partidaelena").likes) },
+    { platform: "TikTok", handle: "@elenapartida", followers: compact(tt("elenapartida").followers), likes: compact(tt("elenapartida").likes) },
     { platform: "Instagram", handle: "@partidaelenaa", followers: "1.4K", likes: "" },
   ],
 } as const;

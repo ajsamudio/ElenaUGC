@@ -1,7 +1,7 @@
 "use client";
 
 import { siteConfig } from "@/lib/site.config";
-import { clipById, clips } from "@/lib/content";
+import { clipById, clips, headline } from "@/lib/content";
 import ClipVideo from "@/components/ClipVideo";
 import { useClipModal } from "@/components/ClipModal";
 import { ArrowIcon, Bow, Cherry, EyeIcon, Heart, Sparkle, Star } from "@/components/Icons";
@@ -56,10 +56,10 @@ export default function Hero() {
 
           <ul className="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-cocoa-700 lg:justify-start">
             <li className="flex items-center gap-1.5">
-              <Star className="h-4 w-4" /> <b className="text-cocoa-900">2.4M+</b> likes
+              <Star className="h-4 w-4" /> <b className="text-cocoa-900">{headline.likes}</b> likes
             </li>
             <li className="flex items-center gap-1.5">
-              <Star className="h-4 w-4" /> <b className="text-cocoa-900">3,200+</b> videos made
+              <Star className="h-4 w-4" /> <b className="text-cocoa-900">{headline.videos}</b> videos made
             </li>
             <li className="flex items-center gap-1.5">
               <Star className="h-4 w-4" /> <b className="text-cocoa-900">Top 1%</b> TikTok Shop affiliate

@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "media": "node scripts/fetch-media.mjs"
+    "media": "node scripts/fetch-media.mjs",
+    "stats": "node scripts/fetch-stats.mjs",
+    "prebuild": "node scripts/fetch-stats.mjs"
   },
   "dependencies": {
     "next": "14.2.5",

@@ -6,6 +6,8 @@
 // to download its poster (+ a muted preview loop if yt-dlp/ffmpeg exist).
 // =============================================================
 
+import { compact, floorPlus, totals, viewsOf } from "@/lib/live";
+
 export type Handle = "partidaelena" | "elenapartida";
 
 export type Clip = {
@@ -14,7 +16,7 @@ export type Clip = {
   cat: CategoryKey;
   label: string; // short card title
   brand?: string; // brand featured, shown as a chip
-  views?: string; // shown as a badge — leave off under ~10K
+  views?: string; // filled in from lib/live-stats.json; badge hidden under 10K
 };
 
 export const categories = [
@@ -33,7 +35,7 @@ export function tiktokUrl(c: Pick<Clip, "id" | "handle">) {
 }
 
 // prettier-ignore
-export const clips: Clip[] = [
+const clipList: Clip[] = [
   // ── Top performers ──────────────────────────────────────────────────────
   { cat: "top", handle: "partidaelena", id: "7691813384320273694", label: "Ballet flats try-on", brand: "Dream Pairs", views: "1.8M" },
   { cat: "top", handle: "partidaelena", id: "7694808144492432670", label: "Double-lined pilates set", brand: "Yeoreo", views: "375.6K" },
@@ -93,16 +95,28 @@ export const clips: Clip[] = [
   { cat: "talking", handle: "elenapartida", id: "7660964680755662111", label: "Lifestyle POV", views: "36.4K" },
 ];
 
+// Live view counts replace the hand-typed ones; top performers sort by views.
+const withViews = (c: Clip): Clip => {
+  const v = viewsOf(c.id);
+  if (v === undefined) return c;
+  return { ...c, views: v >= 10_000 ? compact(v) : undefined };
+};
+export const clips: Clip[] = clipList.map(withViews).sort((a, b) =>
+  a.cat === "top" && b.cat === "top" ? (viewsOf(b.id) ?? 0) - (viewsOf(a.id) ?? 0) : 0
+);
+
 export function clipById(id: string) {
   return clips.find((c) => c.id === id);
 }
 
 // ── Headline numbers (count up on scroll) ─────────────────────────────────
-// Snapshot Oct 14, 2026 — both TikToks + Instagram combined.
+// Pulled live from both TikToks (see lib/live.ts).
+const oneDecimalDown = (n: number) => Math.floor(n * 10) / 10;
+const topM = oneDecimalDown(totals.topViews / 1_000_000);
 export const stats = [
-  { value: 2.4, suffix: "M+", decimals: 1, label: "likes across TikTok", tone: "pink" },
-  { value: 1.8, suffix: "M", decimals: 1, label: "views on a single try-on", tone: "blue" },
-  { value: 3200, suffix: "+", decimals: 0, label: "videos created", tone: "butter" },
+  { value: oneDecimalDown(totals.likes / 1_000_000), suffix: "M+", decimals: 1, label: "likes across TikTok", tone: "pink" },
+  { value: topM, suffix: "M", decimals: Number.isInteger(topM) ? 0 : 1, label: "views on a single video", tone: "blue" },
+  { value: Math.floor(totals.videos / 100) * 100, suffix: "+", decimals: 0, label: "videos created", tone: "butter" },
   { value: 1, prefix: "Top ", suffix: "%", decimals: 0, label: "TikTok Shop affiliate", tone: "cherry" },
 ] as const;
 
@@ -115,21 +129,31 @@ export const brands = [
   "Von Dutch", "Edikted", "Kristin Ess", "Tower 28", "Columbia", "Coral Canton",
 ];
 
+// Headline numbers used in copy (hero chips, About).
+export const headline = {
+  likes: `${oneDecimalDown(totals.likes / 1_000_000)}M+`,
+  videos: floorPlus(totals.videos, 100),
+};
+
 // ── Case studies (real public numbers) ────────────────────────────────────
-export const caseStudies = [
+// `metricIds` = the clips whose live views add up to the big number.
+const sumViews = (ids: string[]) => ids.reduce((s, id) => s + (viewsOf(id) ?? 0), 0);
+const caseStudyList = [
   {
     clipId: "7691813384320273694",
     brand: "Dream Pairs",
     kicker: "Footwear · try-on",
     metric: "1.8M",
+    metricIds: ["7691813384320273694"],
     metricLabel: "views on one video",
-    body: "A simple ballet-flats try-on (fit, comfort and how they style with jeans) that broke out on the For You page and reached 1.8 million people.",
+    body: "A simple ballet-flats try-on (fit, comfort and how they style with jeans) that broke out on the For You page and kept on spreading.",
   },
   {
     clipId: "7694808144492432670",
     brand: "Yeoreo",
     kicker: "Activewear · repeat content",
     metric: "690K+",
+    metricIds: ["7694808144492432670", "7685516504980262174", "7691829816751836446"],
     metricLabel: "views across 3 videos",
     body: "Pilates sets and layering tops shown on the move, with honest sizing. Three separate videos for the same brand all landed with an audience.",
   },
@@ -138,10 +162,15 @@ export const caseStudies = [
     brand: "Good American",
     kicker: "Denim · fit check",
     metric: "97.4K",
+    metricIds: ["7670245390783925535"],
     metricLabel: "views",
     body: "Low-rise baggy jeans with real fit notes, answering the exact questions shoppers have before buying denim online.",
   },
 ];
+export const caseStudies = caseStudyList.map(({ metricIds, ...cs }) => {
+  const total = sumViews(metricIds);
+  return total ? { ...cs, metric: metricIds.length > 1 ? `${compact(total)}+` : compact(total) } : cs;
+});
 
 // ── Fit facts (for apparel brands) ────────────────────────────────────────
 export const fitFacts = [

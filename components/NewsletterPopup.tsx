@@ -5,8 +5,7 @@ import Image from "next/image";
 import { ArrowIcon, Bow, Sparkle } from "@/components/Icons";
 
 const DELAY_MS = 7000;
-const DISMISSED_KEY = "newsletter-dismissed"; // per visit (sessionStorage)
-const JOINED_KEY = "newsletter-joined"; // forever (localStorage)
+const JOINED_KEY = "newsletter-joined"; // once someone signs up, never show again
 
 type Status = "idle" | "sending" | "done" | "error";
 
@@ -35,15 +34,12 @@ export default function NewsletterPopup() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    if (readFlag(() => localStorage, JOINED_KEY) || readFlag(() => sessionStorage, DISMISSED_KEY)) return;
+    if (readFlag(() => localStorage, JOINED_KEY)) return;
     const t = window.setTimeout(() => setOpen(true), DELAY_MS);
     return () => window.clearTimeout(t);
   }, []);
 
-  const close = () => {
-    setOpen(false);
-    setFlag(() => sessionStorage, DISMISSED_KEY);
-  };
+  const close = () => setOpen(false);
 
   useEffect(() => {
     if (!open) return;
