@@ -40,7 +40,7 @@ export const clips: Clip[] = [
   { cat: "top", handle: "elenapartida", id: "7685516504980262174", label: "Layering top try-on", brand: "Yeoreo", views: "305K" },
   { cat: "top", handle: "partidaelena", id: "7695609149496823071", label: "Pretty tops haul", views: "272.5K" },
   { cat: "top", handle: "elenapartida", id: "7670245390783925535", label: "Low-rise baggy jeans", brand: "Good American", views: "97.4K" },
-  { cat: "top", handle: "elenapartida", id: "7689224571517455647", label: "Fit check — jeans", brand: "PWEST", views: "50.2K" },
+  { cat: "top", handle: "elenapartida", id: "7689224571517455647", label: "Fit check: jeans", brand: "PWEST", views: "50.2K" },
   { cat: "top", handle: "elenapartida", id: "7672491731199298847", label: "Pilates set try-on", views: "42.7K" },
   { cat: "top", handle: "partidaelena", id: "7696324566758575390", label: "Workout set try-on", views: "40.3K" },
 
@@ -123,7 +123,7 @@ export const caseStudies = [
     kicker: "Footwear · try-on",
     metric: "1.8M",
     metricLabel: "views on one video",
-    body: "A simple ballet-flats try-on — fit, comfort and how they style with jeans — that broke out on the For You page and reached 1.8 million people.",
+    body: "A simple ballet-flats try-on (fit, comfort and how they style with jeans) that broke out on the For You page and reached 1.8 million people.",
   },
   {
     clipId: "7694808144492432670",
@@ -139,7 +139,7 @@ export const caseStudies = [
     kicker: "Denim · fit check",
     metric: "97.4K",
     metricLabel: "views",
-    body: "Low-rise baggy jeans with real fit notes — answering the exact questions shoppers have before buying denim online.",
+    body: "Low-rise baggy jeans with real fit notes, answering the exact questions shoppers have before buying denim online.",
   },
 ];
 
@@ -153,7 +153,7 @@ export const fitFacts = [
 
 // ── What I make ───────────────────────────────────────────────────────────
 export const formats = [
-  { emoji: "👖", title: "Try-ons & fit checks", body: "Size, fit and styling shown honestly — the content that answers 'will this fit me?' before they buy." },
+  { emoji: "👖", title: "Try-ons & fit checks", body: "Size, fit and styling shown honestly. The content that answers 'will this fit me?' before they buy." },
   { emoji: "📦", title: "Unboxings & first impressions", body: "Genuine reactions, close-up details and the moment the product earns its place." },
   { emoji: "💋", title: "GRWM & beauty demos", body: "Application, swatches and wear tests, filmed in natural light." },
   { emoji: "🎙️", title: "Talking-head reviews", body: "Hook-first, to-camera reviews that sound like a friend, not a script." },
@@ -208,7 +208,7 @@ export const steps = [
 export const faqs = [
   {
     q: "What's the difference between UGC and an influencer post?",
-    a: "UGC is content made for your brand to use — on your socials, in paid ads, on product pages. It doesn't have to be posted on my account. If you'd like it posted to my TikTok too (with a Shop link), that's an add-on.",
+    a: "UGC is content made for your brand to use on your socials, in paid ads, on product pages. It doesn't have to be posted on my account. If you'd like it posted to my TikTok too (with a Shop link), that's an add-on.",
   },
   {
     q: "Do you include usage rights?",
@@ -216,18 +216,18 @@ export const faqs = [
   },
   {
     q: "Can you do Spark Ads or whitelisting?",
-    a: "Yes — I can provide Spark Ad codes for TikTok and whitelisting access so your ads run from my handle.",
+    a: "Yes, I can provide Spark Ad codes for TikTok and whitelisting access so your ads run from my handle.",
   },
   {
     q: "What's the turnaround?",
-    a: "It depends on the package and shipping time — I'll confirm dates in your quote. Rush delivery is available.",
+    a: "It depends on the package and shipping time. I'll confirm dates in your quote. Rush delivery is available.",
   },
   {
     q: "Do I need to send product?",
-    a: "Yes for physical products — I only make content about things I've actually used. Apps, services and local spots in LA are welcome too.",
+    a: "Yes for physical products. I only make content about things I've actually used. Apps, services and local spots in LA are welcome too.",
   },
   {
     q: "Do you take TikTok Shop collabs?",
-    a: "Yes. As a top 1% TikTok Shop affiliate I know what sells on Shop — reach out with a sample request or a paid collab and I'll tell you what I'd make.",
+    a: "Yes. As a top 1% TikTok Shop affiliate I know what sells on Shop. Reach out with a sample request or a paid collab and I'll tell you what I'd make.",
   },
 ];

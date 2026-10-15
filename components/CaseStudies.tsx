@@ -21,7 +21,7 @@ export default function CaseStudies() {
           <Reveal className="max-w-3xl">
             <p className="eyebrow border-cream/20 bg-cream/10 text-cream">★ Results</p>
             <h2 className="mt-5 font-display text-[2.6rem] leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-              Not just pretty videos — <em className="italic text-blush-300">videos that move product.</em>
+              Not just pretty videos, <em className="italic text-blush-300">videos that move product.</em>
             </h2>
             <p className="mt-5 max-w-xl text-cream/70">
               Real, public numbers from my feed. As a top 1% TikTok Shop affiliate I see what sells every day, and that

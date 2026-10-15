@@ -10,7 +10,7 @@ export default function Faq() {
           <h2 className="h-section mt-5">
             Good <em>questions.</em>
           </h2>
-          <p className="mt-5 max-w-sm text-cocoa-700">Anything else? Ask in your inquiry — I answer every one.</p>
+          <p className="mt-5 max-w-sm text-cocoa-700">Anything else? Ask in your inquiry. I answer every one.</p>
         </Reveal>
 
         <div className="space-y-3">

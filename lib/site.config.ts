@@ -18,7 +18,7 @@ export const siteConfig = {
       after: "",
     },
     subhead:
-      "I'm Elena — a UGC creator and top 1% TikTok Shop affiliate making try-ons, activewear, beauty and wellness content that feels like a friend's rec and sells like an ad.",
+      "I'm Elena, a UGC creator and top 1% TikTok Shop affiliate making try-ons, activewear, beauty and wellness content that feels like a friend's rec and sells like an ad.",
     primaryCta: "Work with me",
     secondaryCta: "See my work",
     // Three portfolio clip ids (from lib/content.ts) fanned out in the hero.

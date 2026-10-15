@@ -43,12 +43,12 @@ export default function About() {
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-cocoa-700">
               <p>
                 I&rsquo;m an LA-based Mexicana creator who lives in pilates sets, low-rise denim and a good iced coffee. I&rsquo;ve
-                posted 3,200+ videos across two TikToks — try-ons, GRWMs, gym days and honest reviews — and built a{" "}
+                posted 3,200+ videos across two TikToks (try-ons, GRWMs, gym days and honest reviews) and built a{" "}
                 <b className="text-cocoa-900">top 1% TikTok Shop affiliate</b> business along the way.
               </p>
               <p>
                 So I don&rsquo;t just make content that looks good. I know what makes someone stop scrolling, trust the rec
-                and tap the link — and I bring that to every brand I work with.
+                and tap the link. I bring that to every brand I work with.
               </p>
               <p>Off camera you&rsquo;ll find me at hot pilates, chasing a leg-day PR, or on a froyo run.</p>
             </div>

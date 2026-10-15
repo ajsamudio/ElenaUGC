@@ -17,7 +17,7 @@ const sans = Bricolage_Grotesque({
   display: "swap",
 });
 
-const title = "Elena Partida — UGC Creator · Fashion, Activewear, Beauty & Wellness";
+const title = "Elena Partida | UGC Creator · Fashion, Activewear, Beauty & Wellness";
 const description = siteConfig.hero.subhead;
 
 // Absolute base for social-preview images. Set NEXT_PUBLIC_SITE_URL once the
