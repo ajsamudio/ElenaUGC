@@ -9,7 +9,6 @@ import Services from "@/components/Services";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import MobileCta from "@/components/MobileCta";
 import NewsletterPopup from "@/components/NewsletterPopup";
 import { ClipModalProvider } from "@/components/ClipModal";
 
@@ -29,7 +28,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <MobileCta />
       <NewsletterPopup />
     </ClipModalProvider>
   );

@@ -1,6 +1,5 @@
 import { siteConfig } from "@/lib/site.config";
 import { InstagramIcon, MailIcon, TikTokIcon } from "@/components/Icons";
-import FooterStreams from "@/components/FooterStreams";
 
 export default function Footer() {
   const { contact } = siteConfig;
@@ -12,8 +11,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative overflow-hidden pb-28 pt-16 sm:pb-12">
-      <FooterStreams />
+    <footer className="relative overflow-hidden pb-12 pt-16">
       <div className="container-x">
         <div className="relative z-10 flex flex-wrap items-center justify-center gap-2">
           {socials.map((s) => (
