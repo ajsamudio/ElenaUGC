@@ -20,7 +20,7 @@ export default function Services() {
           {formats.map((f, i) => (
             <Reveal key={f.title} delay={(i % 3) * 80}>
               <div className={`lift h-full rounded-[1.75rem] border border-cocoa-900/10 p-6 ${formatTones[i]}`}>
-                <span className="grid h-12 w-12 place-items-center rounded-2xl border border-cocoa-900/10 bg-white text-2xl shadow-sticker">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl border border-cocoa-900/10 bg-white text-2xl">
                   {f.emoji}
                 </span>
                 <h3 className="mt-5 font-display text-3xl leading-none text-cocoa-900">{f.title}</h3>
@@ -55,7 +55,7 @@ export default function Services() {
                 }`}
               >
                 {p.featured && (
-                  <span className="absolute -top-3.5 right-6 inline-flex rotate-3 items-center gap-1 rounded-full border border-cocoa-900 bg-butter px-3 py-1 text-xs font-bold text-cocoa-900 shadow-sticker">
+                  <span className="absolute -top-3.5 right-6 inline-flex items-center gap-1 rounded-full bg-butter px-3 py-1 text-xs font-semibold text-cocoa-900">
                     <Star className="h-3.5 w-3.5" /> best value
                   </span>
                 )}
@@ -104,7 +104,7 @@ export default function Services() {
           {steps.map((s, i) => (
             <Reveal key={s.n} delay={i * 110}>
               <li className="relative text-center">
-                <span className="relative z-10 mx-auto grid h-16 w-16 place-items-center rounded-full border-2 border-cocoa-900 bg-cream font-display text-2xl italic text-cocoa-900 shadow-sticker">
+                <span className="relative z-10 mx-auto grid h-16 w-16 place-items-center rounded-full border border-cocoa-900/15 bg-cream font-display text-2xl italic text-cocoa-900">
                   {s.n}
                 </span>
                 <h3 className="mt-5 font-display text-3xl text-cocoa-900">{s.title}</h3>

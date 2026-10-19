@@ -5,7 +5,7 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { budgetOptions, inquirySchema, serviceOptions, type InquiryInput } from "@/lib/inquiry-schema";
 import { siteConfig } from "@/lib/site.config";
-import { ArrowIcon, Cherry, MailIcon, Sparkle } from "@/components/Icons";
+import { ArrowIcon, MailIcon } from "@/components/Icons";
 import Dropdown from "@/components/Dropdown";
 
 export default function Contact() {
@@ -75,14 +75,12 @@ export default function Contact() {
                 </span>
               </a>
             </div>
-            <Cherry className="float-a mt-10 hidden h-20 w-20 lg:block" style={{ ["--r" as string]: "-8deg" }} />
           </div>
 
           {status === "sent" ? (
             <div className="modal-in flex items-center rounded-[2rem] border border-cocoa-900/10 bg-cream p-8 shadow-soft sm:p-10">
               <div>
-                <Sparkle className="h-8 w-8" />
-                <h3 className="mt-4 font-display text-5xl italic text-cocoa-900">Sent! ★</h3>
+                <h3 className="mt-4 font-display text-5xl italic text-cocoa-900">Sent!</h3>
                 <p className="mt-3 text-cocoa-700">
                   Your inquiry is in my inbox. I&rsquo;ll get back to you soon with ideas and a quote.
                 </p>

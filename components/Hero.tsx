@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/site.config";
 import { clipById, clips, headline } from "@/lib/content";
 import ClipVideo from "@/components/ClipVideo";
 import { useClipModal } from "@/components/ClipModal";
-import { ArrowIcon, Bow, Cherry, EyeIcon, Heart, Sparkle, Star } from "@/components/Icons";
+import { ArrowIcon, EyeIcon, Star } from "@/components/Icons";
 
 const topIds = clips.filter((c) => c.cat === "top").map((c) => c.id);
 
@@ -87,12 +87,6 @@ export default function Hero() {
             <Star className="absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 sm:h-10 sm:w-10" />
           </div>
 
-          {/* stickers */}
-          <Cherry className="float-a absolute -left-1 bottom-[8%] z-30 h-16 w-16 drop-shadow-md sm:h-20 sm:w-20" style={{ ["--r" as string]: "-12deg" }} />
-          <Bow className="float-b absolute left-[6%] top-[0%] z-30 h-10 w-14 drop-shadow-md sm:h-12 sm:w-16" style={{ ["--r" as string]: "-18deg" }} />
-          <Heart className="float-c absolute bottom-[3%] right-[6%] z-30 h-10 w-10 drop-shadow-md" style={{ ["--r" as string]: "14deg" }} />
-          <Sparkle className="twinkle absolute left-[30%] top-[-2%] h-5 w-5" color="#8EA77F" />
-          <Sparkle className="twinkle absolute bottom-[14%] right-[30%] z-30 h-6 w-6 [animation-delay:-1.4s]" />
         </div>
       </div>
     </section>
@@ -137,8 +131,8 @@ function Phone({
       </button>
       {clip.views && (
         <span
-          className={`absolute z-10 inline-flex items-center gap-1 rounded-full border border-cocoa-900 bg-butter px-2.5 py-1 text-[11px] font-bold text-cocoa-900 shadow-sticker sm:text-xs ${
-            front ? "-bottom-3 left-1/2 -translate-x-1/2 rotate-[-4deg]" : `-bottom-3 ${r < 0 ? "left-3" : "right-3"} rotate-[5deg]`
+          className={`absolute z-10 inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-[11px] font-semibold text-cocoa-900 shadow-soft backdrop-blur sm:text-xs ${
+            front ? "-bottom-3 left-1/2 -translate-x-1/2" : `-bottom-3 ${r < 0 ? "left-3" : "right-3"}`
           }`}
         >
           <EyeIcon /> {clip.views}

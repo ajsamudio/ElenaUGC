@@ -2,12 +2,12 @@ import Image from "next/image";
 import { fitFacts, headline } from "@/lib/content";
 import { siteConfig } from "@/lib/site.config";
 import Reveal from "@/components/Reveal";
-import { Bow, Cherry, InstagramIcon, Sparkle, TikTokIcon } from "@/components/Icons";
+import { InstagramIcon, TikTokIcon } from "@/components/Icons";
 
 const photos = [
-  { src: "/images/portrait.jpg", alt: "Elena in a cream jacket with a feather collar", tag: "hi, it's me ★", cls: "left-[4%] top-[6%] w-[58%] -rotate-[4deg] z-10", tagCls: "bg-butter -rotate-3" },
-  { src: "/images/patrick-ta-event.jpg", alt: "Elena at a Patrick Ta brand event", tag: "patrick ta event 💋", cls: "right-[2%] top-0 w-[44%] rotate-[5deg] z-20", tagCls: "bg-blush-200 rotate-2 !-top-3 !bottom-auto" },
-  { src: "/images/cabo-dress.jpg", alt: "Elena in a turquoise dress in Cabo", tag: "cabo ☀️", cls: "right-[10%] bottom-[2%] w-[42%] -rotate-[2deg] z-30", tagCls: "bg-baby-200 -rotate-2" },
+  { src: "/images/portrait.jpg", alt: "Elena in a cream jacket with a feather collar", tag: "hi, it's me", cls: "left-[4%] top-[6%] w-[58%] -rotate-[1.5deg] z-10", tagCls: "" },
+  { src: "/images/patrick-ta-event.jpg", alt: "Elena at a Patrick Ta brand event", tag: "patrick ta event", cls: "right-[2%] top-0 w-[44%] rotate-[2deg] z-20", tagCls: "!-top-3 !bottom-auto" },
+  { src: "/images/cabo-dress.jpg", alt: "Elena in a turquoise dress in Cabo", tag: "cabo", cls: "right-[10%] bottom-[2%] w-[42%] -rotate-[1deg] z-30", tagCls: "" },
 ];
 
 export default function About() {
@@ -22,15 +22,12 @@ export default function About() {
                 <Image src={p.src} alt={p.alt} fill sizes="(max-width: 1024px) 50vw, 280px" className="object-cover" />
               </div>
               <figcaption
-                className={`absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-cocoa-900 px-3 py-1 text-xs font-bold text-cocoa-900 shadow-sticker ${p.tagCls}`}
+                className={`absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-cream px-3 py-1 text-xs font-medium text-cocoa-700 shadow-soft ${p.tagCls}`}
               >
                 {p.tag}
               </figcaption>
             </figure>
           ))}
-          <Cherry className="float-a absolute bottom-[14%] left-[2%] z-40 h-16 w-16 drop-shadow-md" style={{ ["--r" as string]: "10deg" }} />
-          <Bow className="float-b absolute left-[44%] top-[44%] z-40 h-11 w-14 drop-shadow-md" style={{ ["--r" as string]: "16deg" }} />
-          <Sparkle className="twinkle absolute right-[0%] top-[46%] h-6 w-6" color="#8EA77F" />
         </Reveal>
 
         {/* copy */}
