@@ -37,7 +37,7 @@ export default function Hero() {
             <span className="squiggle italic text-cherry">
               {hero.headline.highlight}
               <svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden>
-                <path d="M3 14c40-9 80-11 120-6s90 6 174-6" fill="none" stroke="#D9AE8E" strokeWidth="6" strokeLinecap="round" />
+                <path d="M3 14c40-9 80-11 120-6s90 6 174-6" fill="none" stroke="#DAB1A6" strokeWidth="6" strokeLinecap="round" />
               </svg>
             </span>{" "}
             {hero.headline.after}
@@ -79,8 +79,8 @@ export default function Hero() {
               <defs>
                 <path id="badge-circle" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0" />
               </defs>
-              <circle cx="60" cy="60" r="58" fill="#5F6B3A" />
-              <text fill="#FFF7F0" fontSize="11.5" fontWeight="700" letterSpacing="2.4">
+              <circle cx="60" cy="60" r="58" fill="#8E645B" />
+              <text fill="#FBF6F2" fontSize="11.5" fontWeight="700" letterSpacing="2.4">
                 <textPath href="#badge-circle">TOP 1% TIKTOK SHOP ★ UGC CREATOR ★ </textPath>
               </text>
             </svg>

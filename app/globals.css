@@ -17,7 +17,7 @@ body {
 }
 
 ::selection {
-  background: #E9CDB8;
+  background: #EBCFC6;
   color: #2a1a17;
 }
 
@@ -38,7 +38,7 @@ body {
     @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition;
   }
   .btn-cherry {
-    @apply btn bg-cherry text-cream shadow-[0_10px_24px_-10px_rgba(95,107,58,0.7)] hover:bg-cherry-dark;
+    @apply btn bg-cherry text-cream shadow-[0_10px_24px_-10px_rgba(142,100,91,0.7)] hover:bg-cherry-dark;
   }
   .btn-ghost {
     @apply btn border border-cocoa-900/15 bg-white/60 text-cocoa-900 backdrop-blur hover:border-cocoa-900/40 hover:bg-white;

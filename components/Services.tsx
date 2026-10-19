@@ -50,7 +50,7 @@ export default function Services() {
               <div
                 className={`lift relative flex h-full flex-col rounded-[2rem] border p-7 sm:p-8 ${
                   p.featured
-                    ? "border-cocoa-900 bg-cherry text-cream shadow-[0_30px_60px_-30px_rgba(95,107,58,0.8)]"
+                    ? "border-cocoa-900 bg-cherry text-cream shadow-[0_30px_60px_-30px_rgba(142,100,91,0.8)]"
                     : "border-cocoa-900/10 bg-white/70 text-cocoa-900"
                 }`}
               >

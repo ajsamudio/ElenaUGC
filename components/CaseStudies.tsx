@@ -65,7 +65,7 @@ export default function CaseStudies() {
           </div>
 
           <Reveal className="mt-10 flex items-center justify-center gap-2 text-sm text-cream/60">
-            <Sparkle className="h-3.5 w-3.5" color="#D9AE8E" />
+            <Sparkle className="h-3.5 w-3.5" color="#DAB1A6" />
             Public view counts as of Oct 2026.
           </Reveal>
         </div>

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
-// Organic, earthy palette: moss ("cherry" token), clay ("blush"), sage ("baby"),
-// cocoa and oat ("butter") on a warm cream base.
+// Soft feminine palette: dusty rose-brown ("cherry" token), light pink ("blush"),
+// beige/sand ("baby"), cocoa browns and pink-beige ("butter") on a warm white base.
 const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
@@ -11,12 +11,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cream: { DEFAULT: "#FFF7F0", 50: "#FFFCF8", 100: "#FFF7F0", 200: "#F8EADF" },
-        blush: { 50: "#FAF1EA", 100: "#F3E2D5", 200: "#E9CDB8", 300: "#D9AE8E", 400: "#C48B66" },
-        baby: { 50: "#F2F5EE", 100: "#E4EBDD", 200: "#CCD9C2", 300: "#AFC2A2", 400: "#8EA77F" },
-        cherry: { DEFAULT: "#5F6B3A", dark: "#4A5429", light: "#7D8A55" },
+        cream: { DEFAULT: "#FBF6F2", 50: "#FFFDFB", 100: "#FBF6F2", 200: "#F2E8E0" },
+        blush: { 50: "#FBF1EE", 100: "#F5E1DB", 200: "#EBCFC6", 300: "#DAB1A6", 400: "#C3938A" },
+        baby: { 50: "#F7F0E9", 100: "#EEE3D7", 200: "#E2D2C1", 300: "#D1B9A2", 400: "#B3967B" },
+        cherry: { DEFAULT: "#8E645B", dark: "#744E46", light: "#AE877E" },
         cocoa: { 500: "#8A6A62", 600: "#6B4D46", 700: "#4E3530", 800: "#3A2622", 900: "#2A1A17" },
-        butter: { DEFAULT: "#EAD9A8", light: "#F4EBD0" },
+        butter: { DEFAULT: "#EAD7CB", light: "#F5EBE4" },
       },
       fontFamily: {
         display: ["var(--font-display)", "Georgia", "serif"],
