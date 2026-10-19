@@ -99,7 +99,7 @@ export default function NewsletterPopup() {
 
           {/* copy + form */}
           <div className="relative px-6 pb-7 pt-6 sm:px-10 sm:py-12">
-            <Sparkle className="twinkle absolute right-16 top-8 h-5 w-5" color="#F3A6BB" />
+            <Sparkle className="twinkle absolute right-16 top-8 h-5 w-5" color="#D9AE8E" />
 
             <p className="eyebrow">★ The newsletter</p>
 

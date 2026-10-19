@@ -30,7 +30,7 @@ export default function About() {
           ))}
           <Cherry className="float-a absolute bottom-[14%] left-[2%] z-40 h-16 w-16 drop-shadow-md" style={{ ["--r" as string]: "10deg" }} />
           <Bow className="float-b absolute left-[44%] top-[44%] z-40 h-11 w-14 drop-shadow-md" style={{ ["--r" as string]: "16deg" }} />
-          <Sparkle className="twinkle absolute right-[0%] top-[46%] h-6 w-6" color="#6FBCE6" />
+          <Sparkle className="twinkle absolute right-[0%] top-[46%] h-6 w-6" color="#8EA77F" />
         </Reveal>
 
         {/* copy */}
@@ -59,7 +59,7 @@ export default function About() {
             <Reveal delay={100}>
               <div className="relative pt-6">
                 <svg aria-hidden viewBox="0 0 60 40" className="absolute left-1/2 top-0 h-10 w-16 -translate-x-1/2">
-                  <path d="M30 34C22 20 10 14 4 2M30 34c8-14 20-20 26-32" fill="none" stroke="#C8102E" strokeWidth="1.6" />
+                  <path d="M30 34C22 20 10 14 4 2M30 34c8-14 20-20 26-32" fill="none" stroke="#5F6B3A" strokeWidth="1.6" />
                 </svg>
                 <div className="hangtag border border-cocoa-900/15 bg-blush-100 px-6 pb-6 pt-9 shadow-soft">
                   <span aria-hidden className="absolute left-1/2 top-4 h-3.5 w-3.5 -translate-x-1/2 rounded-full border border-cocoa-900/30 bg-cream" />

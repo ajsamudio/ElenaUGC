@@ -37,7 +37,7 @@ export default function Hero() {
             <span className="squiggle italic text-cherry">
               {hero.headline.highlight}
               <svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden>
-                <path d="M3 14c40-9 80-11 120-6s90 6 174-6" fill="none" stroke="#F3A6BB" strokeWidth="6" strokeLinecap="round" />
+                <path d="M3 14c40-9 80-11 120-6s90 6 174-6" fill="none" stroke="#D9AE8E" strokeWidth="6" strokeLinecap="round" />
               </svg>
             </span>{" "}
             {hero.headline.after}
@@ -79,7 +79,7 @@ export default function Hero() {
               <defs>
                 <path id="badge-circle" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0" />
               </defs>
-              <circle cx="60" cy="60" r="58" fill="#C8102E" />
+              <circle cx="60" cy="60" r="58" fill="#5F6B3A" />
               <text fill="#FFF7F0" fontSize="11.5" fontWeight="700" letterSpacing="2.4">
                 <textPath href="#badge-circle">TOP 1% TIKTOK SHOP ★ UGC CREATOR ★ </textPath>
               </text>
@@ -91,7 +91,7 @@ export default function Hero() {
           <Cherry className="float-a absolute -left-1 bottom-[8%] z-30 h-16 w-16 drop-shadow-md sm:h-20 sm:w-20" style={{ ["--r" as string]: "-12deg" }} />
           <Bow className="float-b absolute left-[6%] top-[0%] z-30 h-10 w-14 drop-shadow-md sm:h-12 sm:w-16" style={{ ["--r" as string]: "-18deg" }} />
           <Heart className="float-c absolute bottom-[3%] right-[6%] z-30 h-10 w-10 drop-shadow-md" style={{ ["--r" as string]: "14deg" }} />
-          <Sparkle className="twinkle absolute left-[30%] top-[-2%] h-5 w-5" color="#6FBCE6" />
+          <Sparkle className="twinkle absolute left-[30%] top-[-2%] h-5 w-5" color="#8EA77F" />
           <Sparkle className="twinkle absolute bottom-[14%] right-[30%] z-30 h-6 w-6 [animation-delay:-1.4s]" />
         </div>
       </div>

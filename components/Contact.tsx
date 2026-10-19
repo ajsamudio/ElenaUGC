@@ -61,7 +61,7 @@ export default function Contact() {
 
             <div className="mt-10 space-y-3">
               <a
-                href={`mailto:${contact.managementEmail}`}
+                href={`mailto:${contact.email}`}
                 className="group flex items-center gap-4 rounded-3xl border border-cocoa-900/10 bg-cream/80 p-4 transition hover:bg-cream"
               >
                 <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-cherry text-cream">
@@ -69,23 +69,7 @@ export default function Contact() {
                 </span>
                 <span className="min-w-0">
                   <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-cocoa-500">
-                    Brand partnerships · {contact.managementName}
-                  </span>
-                  <span className="block truncate font-semibold text-cocoa-900 group-hover:text-cherry">
-                    {contact.managementEmail}
-                  </span>
-                </span>
-              </a>
-              <a
-                href={`mailto:${contact.email}`}
-                className="group flex items-center gap-4 rounded-3xl border border-cocoa-900/10 bg-cream/80 p-4 transition hover:bg-cream"
-              >
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-cocoa-900 text-cream">
-                  <MailIcon className="h-5 w-5" />
-                </span>
-                <span className="min-w-0">
-                  <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-cocoa-500">
-                    Email me directly
+                    Brand partnerships
                   </span>
                   <span className="block truncate font-semibold text-cocoa-900 group-hover:text-cherry">{contact.email}</span>
                 </span>
@@ -191,8 +175,8 @@ export default function Contact() {
               {status === "error" && (
                 <p className="rounded-2xl bg-cherry/10 px-4 py-3 text-sm text-cherry">
                   Something went wrong sending that. Please try again, or email{" "}
-                  <a className="font-semibold underline" href={`mailto:${contact.managementEmail}`}>
-                    {contact.managementEmail}
+                  <a className="font-semibold underline" href={`mailto:${contact.email}`}>
+                    {contact.email}
                   </a>
                   .
                 </p>

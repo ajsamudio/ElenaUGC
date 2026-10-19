@@ -8,7 +8,7 @@ export default function Footer() {
     { href: contact.tiktok, label: contact.tiktokHandle, icon: <TikTokIcon /> },
     { href: contact.tiktokPersonal, label: contact.tiktokPersonalHandle, icon: <TikTokIcon /> },
     { href: contact.instagram, label: contact.instagramHandle, icon: <InstagramIcon /> },
-    { href: `mailto:${contact.managementEmail}`, label: "Email", icon: <MailIcon /> },
+    { href: `mailto:${contact.email}`, label: "Email", icon: <MailIcon /> },
   ];
 
   return (

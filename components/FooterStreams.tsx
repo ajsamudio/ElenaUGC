@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 
 // Cherry, blush, baby blue, butter, cocoa: the site palette.
-const COLORS = ["#C8102E", "#EC7F9C", "#F3A6BB", "#6FBCE6", "#9CD3F1", "#FFD86B", "#8A6A62"];
+const COLORS = ["#5F6B3A", "#C48B66", "#D9AE8E", "#8EA77F", "#AFC2A2", "#D9C07A", "#8A6A62"];
 const MAX = 320;
 
 type P = { x: number; y: number; vx: number; vy: number; life: number; age: number; c: string; w: number; dir: 1 | -1 };

@@ -31,9 +31,6 @@ export const siteConfig = {
   },
 
   contact: {
-    // Brand deals go to management first; direct email is shown as a backup.
-    managementEmail: "partidaelena@nowadaystalent.com",
-    managementName: "Nowadays Talent",
     email: "elenapartida01@gmail.com",
     instagram: "https://www.instagram.com/partidaelenaa/",
     instagramHandle: "@partidaelenaa",
