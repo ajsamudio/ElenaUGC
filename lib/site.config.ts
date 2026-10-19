@@ -27,7 +27,7 @@ export const siteConfig = {
     secondaryCta: "See my work",
     // Three portfolio clip ids (from lib/content.ts) fanned out in the hero.
     // The middle id is the front phone.
-    phoneIds: ["7694808144492432670", "7691813384320273694", "7695609149496823071"],
+    phoneIds: ["7694808144492432670", "7691813384320273694", "7691541999249329439"],
   },
 
   contact: {

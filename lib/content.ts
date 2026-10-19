@@ -37,6 +37,7 @@ export function tiktokUrl(c: Pick<Clip, "id" | "handle">) {
 // prettier-ignore
 const clipList: Clip[] = [
   // ── Top performers ──────────────────────────────────────────────────────
+  { cat: "top", handle: "partidaelena", id: "7691541999249329439", label: "Halloween costume", views: "1.1M" },
   { cat: "top", handle: "partidaelena", id: "7691813384320273694", label: "Ballet flats try-on", brand: "Dream Pairs", views: "1.8M" },
   { cat: "top", handle: "partidaelena", id: "7694808144492432670", label: "Double-lined pilates set", brand: "Yeoreo", views: "375.6K" },
   { cat: "top", handle: "elenapartida", id: "7685516504980262174", label: "Layering top try-on", brand: "Yeoreo", views: "305K" },
