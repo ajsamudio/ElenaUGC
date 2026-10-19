@@ -1,0 +1,41 @@
+# Refreshes lib/live-stats.json once a day and commits it if anything changed.
+# The commit triggers a normal Vercel deploy, so the site's numbers stay fresh.
+name: Refresh live stats
+
+on:
+  schedule:
+    - cron: "0 14 * * *" # daily, 14:00 UTC (7am Los Angeles)
+  workflow_dispatch: # "Run workflow" button for a manual refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-stats
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # The script has no dependencies, so no npm install needed.
+      - run: node scripts/fetch-stats.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet lib/live-stats.json; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lib/live-stats.json
+          git commit -m "Refresh live stats"
+          git push
