@@ -47,7 +47,7 @@ found in those videos and the portfolio clips. TikTok's public creator embed
 only lists her 10 newest posts, so `npm run shop` adds whatever is new each
 run and never drops old videos or products. It writes `lib/shop.json` and
 small images to `public/images/shop/`. The GitHub Action
-(`.github/workflows/refresh-stats.yml`) runs it every 4 hours alongside the
+(`.github/workflows/refresh-stats.yml`) runs it every 2 hours alongside the
 stats refresh and commits any changes, which redeploys the site.
 
 **Backfilling older products.** TikTok only lists a creator's full video
