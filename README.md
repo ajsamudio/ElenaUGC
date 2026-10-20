@@ -2,8 +2,7 @@
 
 One-page portfolio built to win brand deals for Elena Partida
 (@partidaelena / @elenapartida / @partidaelenaa). Same stack as the Marie Fran
-site: **Next.js 14 + Tailwind**, deployed on **Vercel**, inquiries emailed via
-**Resend**.
+site: **Next.js 14 + Tailwind**, deployed on **Vercel**. Brands reach Elena by email.
 
 ## Run locally
 
@@ -24,7 +23,7 @@ npm run dev
 | About + fit facts hang tag | Height and sizes are what apparel brands ask first |
 | Formats, packages, add-ons, process | Removes friction: what she makes, how to buy, usage rights |
 | FAQ | Usage rights, Spark Ads, turnaround, TikTok Shop |
-| Inquiry form | Captures brand, services, budget and timeline in one go |
+| Contact | Email-only: mailto link plus copy button |
 
 ## Edit content (no component changes needed)
 
@@ -65,16 +64,8 @@ It scans each public video page for tagged products at a gentle pace, saves
 progress to `scripts/.backfill-progress.json` (gitignored) so it can resume,
 and merges everything into the catalog.
 
-## Inquiry emails
-
-Copy `.env.local.example` to `.env.local` and set `RESEND_API_KEY`.
-`INQUIRY_TO_EMAIL` can be comma-separated (e.g. Elena + her manager at Nowadays
-Talent). Without a key the form validates and shows a friendly error instead of
-sending.
-
 ## Deploy to Vercel
 
 1. Push this folder to a GitHub repo and import it at https://vercel.com/new.
-2. Add `RESEND_API_KEY`, `INQUIRY_TO_EMAIL`, `INQUIRY_FROM_EMAIL`, and (once the
-   custom domain is live) `NEXT_PUBLIC_SITE_URL`.
+2. Once the custom domain is live, add `NEXT_PUBLIC_SITE_URL`.
 3. Deploy.
