@@ -10,7 +10,7 @@ const links = [
   { href: "/#about", label: "About" },
   { href: "/#packages", label: "Packages" },
   { href: "/#faq", label: "FAQ" },
-  { href: "/shop", label: "Shop" }, // its own page, so it sits last
+  { href: "/shop", label: "Shop", pill: true }, // its own page: last, in a pink pill
 ];
 
 export default function Nav() {
@@ -58,7 +58,14 @@ export default function Nav() {
         <ul className="hidden items-center gap-7 text-sm font-medium text-cocoa-700 md:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="transition hover:text-cherry">
+              <a
+                href={l.href}
+                className={
+                  "pill" in l
+                    ? "-mx-1 rounded-full bg-blush-200 px-3.5 py-1.5 font-semibold text-cocoa-900 transition hover:bg-blush-300"
+                    : "transition hover:text-cherry"
+                }
+              >
                 {l.label}
               </a>
             </li>
@@ -91,7 +98,9 @@ export default function Nav() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block rounded-2xl px-4 py-3 font-display text-2xl text-cocoa-900 hover:bg-blush-100"
+              className={`block rounded-2xl px-4 py-3 font-display text-2xl text-cocoa-900 hover:bg-blush-100 ${
+                "pill" in l ? "bg-blush-200" : ""
+              }`}
             >
               {l.label}
             </a>
