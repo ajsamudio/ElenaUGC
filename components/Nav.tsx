@@ -9,8 +9,8 @@ const links = [
   { href: "/#results", label: "Results" },
   { href: "/#about", label: "About" },
   { href: "/#packages", label: "Packages" },
-  { href: "/shop", label: "Shop" },
   { href: "/#faq", label: "FAQ" },
+  { href: "/shop", label: "Shop" }, // its own page, so it sits last
 ];
 
 export default function Nav() {
