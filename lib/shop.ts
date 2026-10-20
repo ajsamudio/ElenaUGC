@@ -16,6 +16,7 @@ export type ShopVideo = {
   caption: string;
   postedAt?: string;
   views?: number;
+  viewsAt?: string; // when views were last refreshed
   poster: string | null;
   productIds: string[]; // into shop.catalog
 };
@@ -59,7 +60,7 @@ export function toModalClip(v: ShopVideo): ModalClip {
     id: v.id,
     handle: "partidaelena",
     label: p ? shortTitle(p.title) : cleanCaption(v.caption) || "Latest post",
-    views: v.views && v.views >= 1000 ? compact(v.views) : undefined,
+    views: v.views != null ? compact(v.views) : undefined,
     shopUrl: p?.url,
   };
 }

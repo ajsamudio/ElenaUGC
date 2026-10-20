@@ -27,6 +27,7 @@ const HANDLE = "partidaelena";
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 const HEADERS = { "User-Agent": UA, "Accept-Language": "en-US,en;q=0.9" };
+const VIEWS_PER_RUN = 120; // older videos whose view counts are refreshed each run
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const exists = (p) => stat(p).then(() => true, () => false);
@@ -186,7 +187,16 @@ export async function save({ prev, archive, catalog, pinnedIds, today }) {
   const videos = [
     ...pinnedIds.filter((id) => archive.has(id)).map((id) => archive.get(id)),
     ...[...archive.values()].filter((v) => !pinned.has(v.id)).sort(newestFirst),
-  ].map((v) => ({ id: v.id, pinned: pinned.has(v.id), caption: v.caption, postedAt: v.postedAt, views: v.views, poster: v.poster ?? null, productIds: v.productIds ?? [] }));
+  ].map((v) => ({
+    id: v.id,
+    pinned: pinned.has(v.id),
+    caption: v.caption,
+    postedAt: v.postedAt,
+    views: v.views,
+    viewsAt: v.viewsAt,
+    poster: v.poster ?? null,
+    productIds: v.productIds ?? [],
+  }));
 
   const products = [];
   for (const p of [...catalog.values()].sort((a, b) => (BigInt(b.videoId) > BigInt(a.videoId) ? 1 : -1))) {
@@ -231,12 +241,38 @@ async function main() {
       caption: d?.caption ?? old?.caption ?? (v.desc ?? "").trim(),
       postedAt: d?.postedAt ?? old?.postedAt,
       views: d?.views ?? (Number(v.playCount) || old?.views),
+      viewsAt: d ? new Date().toISOString() : old?.viewsAt,
       poster: poster ?? old?.poster ?? null,
       productIds: d ? d.products.map((p) => p.id) : old?.productIds ?? [],
     });
     console.log(`  video ✓ ${v.id}${i < pins ? " (pinned)" : ""} · ${d?.products.length ?? "?"} products`);
     await sleep(300);
   }
+
+  // Older videos get fresh view counts too, a batch per run (least recently
+  // refreshed first). At every-4-hours that cycles through the whole archive
+  // about once a day, without fetching 600+ pages every run.
+  const stale = [...archive.values()]
+    .filter((v) => !list.some((l) => l.id === v.id))
+    .sort((a, b) => (a.viewsAt ?? "").localeCompare(b.viewsAt ?? ""))
+    .slice(0, VIEWS_PER_RUN);
+  let refreshed = 0;
+  for (let i = 0; i < stale.length; i += 4) {
+    await Promise.all(
+      stale.slice(i, i + 4).map(async (v) => {
+        try {
+          const d = await details(v.id);
+          if (d.views != null) v.views = d.views;
+          refreshed++;
+        } catch {
+          // Keep the last count; it goes to the back of the line either way.
+        }
+        v.viewsAt = new Date().toISOString();
+      })
+    );
+    await sleep(400);
+  }
+  console.log(`Refreshed views on ${refreshed}/${stale.length} older videos.`);
 
   // Portfolio clips (both accounts), a few at a time. Products only: these
   // are curated on the home page, not part of her feed here.

@@ -261,7 +261,7 @@ function Card({ video, list }: { video: ShopVideo; list: string[] }) {
 
         <div className="absolute inset-x-2.5 top-2.5 flex items-start justify-between gap-2">
           {video.pinned ? <span className="chip bg-cream/90 text-cocoa-900 backdrop-blur">★ Pinned</span> : <span />}
-          {video.views && video.views >= 1000 && (
+          {video.views != null && (
             <span className="chip shrink-0 border border-cocoa-900 bg-butter text-cocoa-900">
               <EyeIcon /> {compact(video.views)}
             </span>
