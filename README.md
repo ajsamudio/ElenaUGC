@@ -51,6 +51,20 @@ reads TikTok's public creator embed and each video page, then writes
 Action (`.github/workflows/refresh-stats.yml`) runs it alongside the stats
 refresh and commits any changes, which redeploys the site.
 
+**Backfilling older products.** TikTok only lists a creator's full video
+grid to logged-in visitors, so older videos come from a logged-in browser:
+open her profile, scroll the Latest and Popular tabs (Oldest errors out for
+her account), collect the `/video/<id>` links into a text file (one id per
+line or space-separated), then run
+
+```bash
+node scripts/backfill-shop.mjs path/to/video-ids.txt
+```
+
+It scans each public video page for tagged products at a gentle pace, saves
+progress to `scripts/.backfill-progress.json` (gitignored) so it can resume,
+and merges everything into the catalog.
+
 ## Inquiry emails
 
 Copy `.env.local.example` to `.env.local` and set `RESEND_API_KEY`.

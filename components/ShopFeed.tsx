@@ -48,7 +48,9 @@ function Shelf({ title, sub, videos }: { title: string; sub: string; videos: Sho
   );
 }
 
-/** Every product she's tagged, newest first, filterable by lane. */
+const PAGE = 24;
+
+/** Every product she's tagged, newest first, searchable and filterable by lane. */
 function Catalog() {
   const lanes = useMemo(() => {
     const count = new Map<string, number>();
@@ -56,7 +58,17 @@ function Catalog() {
     return [...count.entries()].sort((a, b) => b[1] - a[1]).map(([lane]) => lane);
   }, []);
   const [lane, setLane] = useState<string | null>(null);
-  const items = lane ? shop.catalog.filter((p) => laneOf(p) === lane) : shop.catalog;
+  const [query, setQuery] = useState("");
+  const [shown, setShown] = useState(PAGE);
+  const q = query.trim().toLowerCase();
+  const matches = shop.catalog.filter(
+    (p) => (!lane || laneOf(p) === lane) && (!q || p.title.toLowerCase().includes(q)),
+  );
+  const items = matches.slice(0, shown);
+  const pick = (l: string | null) => {
+    setLane(l);
+    setShown(PAGE);
+  };
 
   return (
     <section id="all" className="container-x mt-20 scroll-mt-24">
@@ -65,32 +77,54 @@ function Catalog() {
         <p className="text-sm text-cocoa-600">{shop.catalog.length} products from my videos, newest first.</p>
       </Reveal>
 
-      {lanes.length > 1 && (
-        <div className="no-scrollbar -mx-4 mt-6 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-          <div className="flex w-max gap-2 sm:flex-wrap">
-            {[null, ...lanes].map((l) => {
-              const on = l === lane;
-              return (
-                <button
-                  key={l ?? "all"}
-                  type="button"
-                  aria-pressed={on}
-                  onClick={() => setLane(l)}
-                  className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition ${
-                    on
-                      ? "border-cocoa-900 bg-cocoa-900 text-cream shadow-soft"
-                      : "border-cocoa-900/15 bg-white/60 text-cocoa-700 hover:border-cocoa-900/40 hover:bg-white"
-                  }`}
-                >
-                  {l ?? "All"}
-                </button>
-              );
-            })}
+      <div className="mt-6 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+        <label className="relative block w-full lg:max-w-xs">
+          <span className="sr-only">Search products</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setShown(PAGE);
+            }}
+            placeholder="Search: leggings, flats, SKIMS…"
+            className="w-full rounded-full border border-cocoa-900/15 bg-white/70 px-4 py-2.5 text-sm text-cocoa-900 placeholder:text-cocoa-500 focus:border-cherry focus:outline-none"
+          />
+        </label>
+        {lanes.length > 1 && (
+          <div className="no-scrollbar -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+            <div className="flex w-max gap-2 sm:flex-wrap">
+              {[null, ...lanes].map((l) => {
+                const on = l === lane;
+                return (
+                  <button
+                    key={l ?? "all"}
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => pick(l)}
+                    className={`whitespace-nowrap rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                      on
+                        ? "border-cocoa-900 bg-cocoa-900 text-cream shadow-soft"
+                        : "border-cocoa-900/15 bg-white/60 text-cocoa-700 hover:border-cocoa-900/40 hover:bg-white"
+                    }`}
+                  >
+                    {l ?? "All"}
+                  </button>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        )}
+      </div>
+
+      {matches.length === 0 && (
+        <p className="mt-10 text-center text-cocoa-600">Nothing matches &ldquo;{query}&rdquo; yet.</p>
       )}
 
-      <div key={lane ?? "all"} className="tab-panel mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 xl:grid-cols-6">
+      <div
+        key={lane ?? "all"}
+        className="tab-panel mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 xl:grid-cols-6"
+      >
         {items.map((p) => (
           <a
             key={p.id}
@@ -116,12 +150,25 @@ function Catalog() {
             </div>
             <div className="flex flex-1 flex-col p-3">
               <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-cocoa-500">{laneOf(p)}</span>
-              <span className="mt-1 line-clamp-2 text-sm font-semibold leading-snug text-cocoa-900">{shortTitle(p.title)}</span>
+              <span className="mt-1 line-clamp-2 text-sm font-semibold leading-snug text-cocoa-900">
+                {shortTitle(p.title)}
+              </span>
               <span className="mt-auto pt-2 text-xs font-semibold text-cherry group-hover:underline">Shop it →</span>
             </div>
           </a>
         ))}
       </div>
+
+      {matches.length > shown && (
+        <div className="mt-10 flex flex-col items-center gap-2">
+          <button type="button" onClick={() => setShown((n) => n + PAGE)} className="btn-ghost">
+            Show more
+          </button>
+          <p className="text-xs text-cocoa-600">
+            Showing {shown} of {matches.length}
+          </p>
+        </div>
+      )}
     </section>
   );
 }
@@ -182,14 +229,21 @@ function Card({ video, list }: { video: ShopVideo; list: string[] }) {
           >
             {p.image ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={p.image} alt="" loading="lazy" className="h-11 w-11 shrink-0 rounded-xl bg-blush-50 object-cover" />
+              <img
+                src={p.image}
+                alt=""
+                loading="lazy"
+                className="h-11 w-11 shrink-0 rounded-xl bg-blush-50 object-cover"
+              />
             ) : (
               <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-blush-100 text-cherry">
                 <BagIcon />
               </span>
             )}
             <span className="min-w-0 flex-1">
-              <span className="line-clamp-2 text-xs font-semibold leading-snug text-cocoa-900">{shortTitle(p.title)}</span>
+              <span className="line-clamp-2 text-xs font-semibold leading-snug text-cocoa-900">
+                {shortTitle(p.title)}
+              </span>
               <span className="mt-0.5 inline-flex items-center gap-1 whitespace-nowrap text-[11px] font-semibold text-cherry group-hover:underline">
                 Shop it →
               </span>

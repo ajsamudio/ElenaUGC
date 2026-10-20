@@ -17,11 +17,11 @@ import { readFile, writeFile, mkdir, readdir, rm, stat } from "node:fs/promises"
 import { execFileSync } from "node:child_process";
 import os from "node:os";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const OUT = path.join(ROOT, "lib/shop.json");
+export const OUT = path.join(ROOT, "lib/shop.json");
 const IMG_DIR = path.join(ROOT, "public/images/shop");
 const HANDLE = "partidaelena";
 const UA =
@@ -74,7 +74,7 @@ function pinnedCount(ids) {
 }
 
 /** Caption, date, views and tagged TikTok Shop products for one video. */
-async function details(id, handle = HANDLE) {
+export async function details(id, handle = HANDLE) {
   const html = await page(`https://www.tiktok.com/@${handle}/video/${id}`);
   const data = script(html, "__UNIVERSAL_DATA_FOR_REHYDRATION__");
   const item = data?.__DEFAULT_SCOPE__?.["webapp.video-detail"]?.itemInfo?.itemStruct;
@@ -119,7 +119,7 @@ async function details(id, handle = HANDLE) {
  * Saves an image once; returns its public path, or null if it couldn't be fetched.
  * With `width` (and ffmpeg on PATH) it's shrunk first, so daily commits stay small.
  */
-async function saveImage(url, name, width) {
+export async function saveImage(url, name, width) {
   const file = path.join(IMG_DIR, name);
   if (await exists(file)) return `/images/shop/${name}`;
   if (!url) return null;
@@ -242,7 +242,10 @@ async function main() {
   console.log(`Done: ${videos.length} videos, ${products.length} products in the catalog.`);
 }
 
-main().catch((e) => {
-  // Never fail the job over the shop; the saved file still works.
-  console.error("Shop refresh skipped:", e.message);
-});
+// Only run when executed directly (scripts/backfill-shop.mjs imports the helpers).
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((e) => {
+    // Never fail the job over the shop; the saved file still works.
+    console.error("Shop refresh skipped:", e.message);
+  });
+}

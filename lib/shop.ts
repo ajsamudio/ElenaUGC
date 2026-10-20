@@ -25,6 +25,9 @@ export const shop = data as { updatedAt?: string; videos: ShopVideo[]; catalog: 
 const lanes: Record<string, string> = {
   "Sports & Outdoor": "Activewear",
   "Womenswear & Underwear": "Fashion",
+  "Menswear & Underwear": "Fashion",
+  "Fashion Accessories": "Accessories",
+  "Food & Beverages": "Wellness",
   "Beauty & Personal Care": "Beauty",
   Shoes: "Shoes",
   Health: "Wellness",
