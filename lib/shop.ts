@@ -1,6 +1,6 @@
 // Every @partidaelena video the site knows about (pinned first, then newest)
 // and the catalog of TikTok Shop products tagged in them. Written by
-// `npm run shop` (every 2 hours in GitHub Actions) and scripts/backfill-shop.mjs.
+// `npm run shop` (every 4 hours in GitHub Actions) and scripts/backfill-shop.mjs.
 import data from "@/lib/shop.json";
 import { compact } from "@/lib/live";
 import type { ModalClip } from "@/components/ClipModal";

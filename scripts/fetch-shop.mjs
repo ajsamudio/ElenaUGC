@@ -11,7 +11,7 @@
 // Results go to lib/shop.json + public/images/shop/.
 //
 // Run with:  npm run shop
-// Also runs every 2 hours in .github/workflows/refresh-stats.yml.
+// Also runs every 4 hours in .github/workflows/refresh-stats.yml.
 // If TikTok blocks the list, the last saved shop is kept, never emptied.
 import { readFile, writeFile, mkdir, readdir, rm, stat } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
