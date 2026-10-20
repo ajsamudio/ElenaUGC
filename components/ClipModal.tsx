@@ -2,7 +2,10 @@
 
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
 import { clipById, tiktokUrl, type Clip } from "@/lib/content";
-import { ArrowIcon, EyeIcon, TikTokIcon } from "@/components/Icons";
+import { ArrowIcon, BagIcon, EyeIcon, TikTokIcon } from "@/components/Icons";
+
+/** What the lightbox needs to show a clip; portfolio clips and shop videos both fit. */
+export type ModalClip = Pick<Clip, "id" | "handle" | "label" | "brand" | "views"> & { shopUrl?: string };
 
 type Ctx = { open: (id: string, list?: string[]) => void };
 const ModalCtx = createContext<Ctx>({ open: () => {} });
@@ -13,7 +16,14 @@ export const useClipModal = () => useContext(ModalCtx);
  * Wraps the page so any clip (hero phones, portfolio, case studies) can open
  * the full TikTok player in a lightbox, with prev/next through its group.
  */
-export function ClipModalProvider({ children }: { children: React.ReactNode }) {
+export function ClipModalProvider({
+  children,
+  lookup = clipById,
+}: {
+  children: React.ReactNode;
+  /** Where ids are looked up; defaults to the portfolio clips. */
+  lookup?: (id: string) => ModalClip | undefined;
+}) {
   const [list, setList] = useState<string[]>([]);
   const [index, setIndex] = useState<number | null>(null);
 
@@ -45,7 +55,7 @@ export function ClipModalProvider({ children }: { children: React.ReactNode }) {
     };
   }, [index, close, step]);
 
-  const clip: Clip | undefined = index === null ? undefined : clipById(list[index]);
+  const clip = index === null ? undefined : lookup(list[index]);
 
   return (
     <ModalCtx.Provider value={{ open }}>
@@ -99,14 +109,26 @@ export function ClipModalProvider({ children }: { children: React.ReactNode }) {
               >
                 <ArrowIcon className="h-4 w-4 rotate-180" />
               </button>
-              <a
-                href={tiktokUrl(clip)}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-cream/15 px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-cream/25"
-              >
-                <TikTokIcon /> Watch on TikTok
-              </a>
+              <div className="flex items-center gap-2">
+                {clip.shopUrl && (
+                  <a
+                    href={clip.shopUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-cream px-4 py-2.5 text-sm font-semibold text-cocoa-900 transition hover:bg-white"
+                  >
+                    <BagIcon /> Shop it
+                  </a>
+                )}
+                <a
+                  href={tiktokUrl(clip)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-cream/15 px-4 py-2.5 text-sm font-semibold text-cream transition hover:bg-cream/25"
+                >
+                  <TikTokIcon /> {clip.shopUrl ? "TikTok" : "Watch on TikTok"}
+                </a>
+              </div>
               <button
                 onClick={() => step(1)}
                 disabled={list.length < 2}

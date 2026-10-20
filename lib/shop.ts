@@ -1,0 +1,55 @@
+// Her pinned + latest @partidaelena videos and the TikTok Shop products tagged
+// in them. Written by `npm run shop` (also runs daily in GitHub Actions).
+import data from "@/lib/shop.json";
+import { compact } from "@/lib/live";
+import type { ModalClip } from "@/components/ClipModal";
+
+export type ShopProduct = { id: string; title: string; url: string; image: string | null; category?: string };
+
+/** A product from the catalog, plus the newest video she tagged it in. */
+export type CatalogProduct = ShopProduct & { videoId: string; handle: "partidaelena" | "elenapartida"; firstSeen: string };
+
+export type ShopVideo = {
+  id: string;
+  pinned: boolean;
+  caption: string;
+  postedAt?: string;
+  views?: number;
+  poster: string | null;
+  products: ShopProduct[];
+};
+
+export const shop = data as { updatedAt?: string; videos: ShopVideo[]; catalog: CatalogProduct[] };
+
+// TikTok Shop's category names → the site's own lanes. Unknown ones pass through.
+const lanes: Record<string, string> = {
+  "Sports & Outdoor": "Activewear",
+  "Womenswear & Underwear": "Fashion",
+  "Beauty & Personal Care": "Beauty",
+  Shoes: "Shoes",
+  Health: "Wellness",
+};
+export const laneOf = (p: ShopProduct) => (p.category ? lanes[p.category] ?? p.category : "Other");
+
+/** "YEOREO Women's 2-Piece Workout Set - Off-Shoulder…" → "YEOREO Women's 2-Piece Workout Set". */
+export function shortTitle(title: string) {
+  const cut = title.split(/\s[-–|,]\s|,\s/)[0].trim();
+  return cut.length > 48 ? `${cut.slice(0, 46).trimEnd()}…` : cut;
+}
+
+/** Caption without the hashtag pile. */
+export function cleanCaption(caption: string) {
+  return caption.replace(/#[\w.]+/g, "").replace(/\s+/g, " ").trim();
+}
+
+/** Shapes a shop video for the shared lightbox. */
+export function toModalClip(v: ShopVideo): ModalClip {
+  const p = v.products[0];
+  return {
+    id: v.id,
+    handle: "partidaelena",
+    label: p ? shortTitle(p.title) : cleanCaption(v.caption) || "Latest post",
+    views: v.views && v.views >= 1000 ? compact(v.views) : undefined,
+    shopUrl: p?.url,
+  };
+}

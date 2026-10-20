@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/lib/site.config";
 
+// "/#…" so the links also work from the /shop page.
 const links = [
-  { href: "#work", label: "Work" },
-  { href: "#results", label: "Results" },
-  { href: "#about", label: "About" },
-  { href: "#packages", label: "Packages" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#work", label: "Work" },
+  { href: "/#results", label: "Results" },
+  { href: "/#about", label: "About" },
+  { href: "/#packages", label: "Packages" },
+  { href: "/shop", label: "Shop" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function Nav() {
@@ -48,7 +50,7 @@ export default function Nav() {
             : "border border-transparent"
         }`}
       >
-        <a href="#top" className="font-display text-3xl italic leading-none text-cocoa-900" onClick={() => setOpen(false)}>
+        <a href="/#top" className="font-display text-3xl italic leading-none text-cocoa-900" onClick={() => setOpen(false)}>
           {siteConfig.wordmark}
           <span className="not-italic text-cherry">★</span>
         </a>
@@ -64,7 +66,7 @@ export default function Nav() {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a href="#contact" className="btn-cherry hidden px-5 py-2.5 sm:inline-flex">
+          <a href="/#contact" className="btn-cherry hidden px-5 py-2.5 sm:inline-flex">
             Book Elena
           </a>
           <button
@@ -94,7 +96,7 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="btn-cherry mt-2 w-full">
+          <a href="/#contact" onClick={() => setOpen(false)} className="btn-cherry mt-2 w-full">
             Book Elena
           </a>
         </div>

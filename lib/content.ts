@@ -119,6 +119,8 @@ export const stats = [
   { value: topM, suffix: "M", decimals: Number.isInteger(topM) ? 0 : 1, label: "views on a single video", tone: "blue" },
   { value: Math.floor(totals.videos / 100) * 100, suffix: "+", decimals: 0, label: "videos created", tone: "butter" },
   { value: 1, prefix: "Top ", suffix: "%", decimals: 0, label: "TikTok Shop affiliate", tone: "cherry" },
+  // Typed by hand from her TikTok Shop dashboard (not public, so not live).
+  { value: 450, prefix: "$", suffix: "K+", decimals: 0, label: "GMV in the last 30 days", tone: "pink" },
 ] as const;
 
 // ── Brands featured in her content (marquee) ──────────────────────────────

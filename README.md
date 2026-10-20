@@ -39,6 +39,18 @@ npm run dev
    preview loop in `public/clips/` (needs `yt-dlp` + `ffmpeg` on PATH; without
    them you still get the poster). Existing files are skipped.
 
+## Shop page (`/shop`)
+
+Shows her pinned @partidaelena videos plus her 10 latest, each with the
+TikTok Shop products tagged in it, plus "Everything I've tagged": a catalog of
+every product found in those videos and the portfolio clips. TikTok has no
+public list of her whole showcase, so the catalog keeps every product it has
+ever seen and grows a little each day. Nothing to edit by hand: `npm run shop`
+reads TikTok's public creator embed and each video page, then writes
+`lib/shop.json` and small images to `public/images/shop/`. The daily GitHub
+Action (`.github/workflows/refresh-stats.yml`) runs it alongside the stats
+refresh and commits any changes, which redeploys the site.
+
 ## Inquiry emails
 
 Copy `.env.local.example` to `.env.local` and set `RESEND_API_KEY`.
