@@ -113,14 +113,12 @@ export function clipById(id: string) {
 // ── Headline numbers (count up on scroll) ─────────────────────────────────
 // Pulled live from both TikToks (see lib/live.ts).
 const oneDecimalDown = (n: number) => Math.floor(n * 10) / 10;
-const topM = oneDecimalDown(totals.topViews / 1_000_000);
 export const stats = [
   { value: oneDecimalDown(totals.likes / 1_000_000), suffix: "M+", decimals: 1, label: "likes across TikTok", tone: "pink" },
-  { value: topM, suffix: "M", decimals: Number.isInteger(topM) ? 0 : 1, label: "views on a single video", tone: "blue" },
   { value: Math.floor(totals.videos / 100) * 100, suffix: "+", decimals: 0, label: "videos created", tone: "butter" },
   { value: 1, prefix: "Top ", suffix: "%", decimals: 0, label: "TikTok Shop affiliate", tone: "cherry" },
   // Typed by hand from her TikTok Shop dashboard (not public, so not live).
-  { value: 450, prefix: "$", suffix: "K+", decimals: 0, label: "GMV in the last 30 days", tone: "pink" },
+  { value: 450, prefix: "$", suffix: "K+", decimals: 0, label: "GMV in the last 30 days", tone: "blue" },
 ] as const;
 
 // ── Brands featured in her content (marquee) ──────────────────────────────
