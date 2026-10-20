@@ -9,7 +9,6 @@ import Services from "@/components/Services";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import NewsletterPopup from "@/components/NewsletterPopup";
 import { ClipModalProvider } from "@/components/ClipModal";
 
 export default function Home() {
@@ -28,7 +27,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <NewsletterPopup />
     </ClipModalProvider>
   );
 }
