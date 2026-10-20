@@ -41,15 +41,15 @@ npm run dev
 
 ## Shop page (`/shop`)
 
-Shows her pinned @partidaelena videos plus her 10 latest, each with the
-TikTok Shop products tagged in it, plus "Everything I've tagged": a catalog of
-every product found in those videos and the portfolio clips. TikTok has no
-public list of her whole showcase, so the catalog keeps every product it has
-ever seen and grows a little each day. Nothing to edit by hand: `npm run shop`
-reads TikTok's public creator embed and each video page, then writes
-`lib/shop.json` and small images to `public/images/shop/`. The daily GitHub
-Action (`.github/workflows/refresh-stats.yml`) runs it alongside the stats
-refresh and commits any changes, which redeploys the site.
+Shows her pinned @partidaelena videos, then every other video the site knows
+about (newest first, 50 at a time), each with the TikTok Shop products tagged
+in it, plus "Everything I've tagged": a searchable catalog of every product
+found in those videos and the portfolio clips. TikTok's public creator embed
+only lists her 10 newest posts, so `npm run shop` adds whatever is new each
+run and never drops old videos or products. It writes `lib/shop.json` and
+small images to `public/images/shop/`. The GitHub Action
+(`.github/workflows/refresh-stats.yml`) runs it every 4 hours alongside the
+stats refresh and commits any changes, which redeploys the site.
 
 **Backfilling older products.** TikTok only lists a creator's full video
 grid to logged-in visitors, so older videos come from a logged-in browser:

@@ -11,7 +11,7 @@
 // Results go to lib/shop.json + public/images/shop/.
 //
 // Run with:  npm run shop
-// Also runs daily in .github/workflows/refresh-stats.yml.
+// Also runs every 4 hours in .github/workflows/refresh-stats.yml.
 // If TikTok blocks the list, the last saved shop is kept, never emptied.
 import { readFile, writeFile, mkdir, readdir, rm, stat } from "node:fs/promises";
 import { execFileSync } from "node:child_process";
@@ -117,7 +117,7 @@ export async function details(id, handle = HANDLE) {
 
 /**
  * Saves an image once; returns its public path, or null if it couldn't be fetched.
- * With `width` (and ffmpeg on PATH) it's shrunk first, so daily commits stay small.
+ * With `width` (and ffmpeg on PATH) it's shrunk first, so the scheduled commits stay small.
  */
 export async function saveImage(url, name, width) {
   const file = path.join(IMG_DIR, name);

@@ -22,7 +22,7 @@ export default function ShopFeed() {
         title="Just posted"
         sub={`${latest.length} videos, newest first. Tap to watch, or shop what I tagged.`}
         videos={latest}
-        pageSize={20}
+        pageSize={50}
       />
       {shop.catalog.length > 0 && <Catalog />}
 
@@ -74,7 +74,7 @@ function Shelf({
   );
 }
 
-const PAGE = 24;
+const PAGE = 50;
 
 /** Every product she's tagged, newest first, searchable and filterable by lane. */
 function Catalog() {

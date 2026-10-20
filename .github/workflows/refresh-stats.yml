@@ -1,11 +1,13 @@
 # Refreshes lib/live-stats.json and the /shop page (lib/shop.json + its images)
-# once a day and commits them if anything changed. The commit triggers a normal
+# every 4 hours and commits them if anything changed. The commit triggers a normal
 # Vercel deploy, so the site's numbers and shop stay fresh.
 name: Refresh live stats + shop
 
 on:
   schedule:
-    - cron: "0 14 * * *" # daily, 14:00 UTC (7am Los Angeles)
+    # Every 4 hours: the public list only shows her 10 newest posts and she
+    # posts ~15 a day, so a once-a-day run would miss some.
+    - cron: "0 */4 * * *"
   workflow_dispatch: # "Run workflow" button for a manual refresh
 
 permissions:
