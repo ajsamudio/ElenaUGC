@@ -115,10 +115,10 @@ export function clipById(id: string) {
 const oneDecimalDown = (n: number) => Math.floor(n * 10) / 10;
 export const stats = [
   { value: oneDecimalDown(totals.likes / 1_000_000), suffix: "M+", decimals: 1, label: "likes across TikTok", tone: "pink" },
-  { value: Math.floor(totals.videos / 100) * 100, suffix: "+", decimals: 0, label: "videos created", tone: "butter" },
-  { value: 1, prefix: "Top ", suffix: "%", decimals: 0, label: "TikTok Shop affiliate", tone: "cherry" },
   // Typed by hand from her TikTok Shop dashboard (not public, so not live).
   { value: 450, prefix: "$", suffix: "K+", decimals: 0, label: "GMV in the last 30 days", tone: "blue" },
+  { value: Math.floor(totals.videos / 100) * 100, suffix: "+", decimals: 0, label: "vids created", tone: "butter" },
+  { value: 1, prefix: "Top ", suffix: "%", decimals: 0, label: "TikTok Shop affiliate", tone: "cherry" },
 ] as const;
 
 // ── Brands featured in her content (marquee) ──────────────────────────────
