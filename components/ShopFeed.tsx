@@ -5,20 +5,25 @@ import { ClipModalProvider, useClipModal } from "@/components/ClipModal";
 import Reveal from "@/components/Reveal";
 import { BagIcon, EyeIcon, PlayIcon, TikTokIcon } from "@/components/Icons";
 import { compact } from "@/lib/live";
-import { shop, shortTitle, cleanCaption, laneOf, toModalClip, type ShopVideo } from "@/lib/shop";
+import { shop, shortTitle, cleanCaption, laneOf, productsOf, toModalClip, type ShopVideo } from "@/lib/shop";
 import { siteConfig } from "@/lib/site.config";
 
 const byId = new Map(shop.videos.map((v) => [v.id, toModalClip(v)]));
+const pinned = shop.videos.filter((v) => v.pinned);
+const latest = shop.videos.filter((v) => !v.pinned);
+const latestIds = latest.map((v) => v.id);
 
-/** Pinned favourites, then her latest posts, each with its TikTok Shop products. */
+/** Pinned favourites, then every post the site knows about, each with its TikTok Shop products. */
 export default function ShopFeed() {
-  const pinned = shop.videos.filter((v) => v.pinned);
-  const latest = shop.videos.filter((v) => !v.pinned);
-
   return (
     <ClipModalProvider lookup={(id) => byId.get(id)}>
       {pinned.length > 0 && <Shelf title="Pinned" sub="The ones I keep at the top of my profile." videos={pinned} />}
-      <Shelf title="Just posted" sub="My newest videos, refreshed every day." videos={latest} />
+      <Shelf
+        title="Just posted"
+        sub={`${latest.length} videos, newest first. Tap to watch, or shop what I tagged.`}
+        videos={latest}
+        pageSize={20}
+      />
       {shop.catalog.length > 0 && <Catalog />}
 
       <div className="container-x mt-14 flex flex-wrap items-center justify-center gap-3 text-sm">
@@ -31,8 +36,19 @@ export default function ShopFeed() {
   );
 }
 
-function Shelf({ title, sub, videos }: { title: string; sub: string; videos: ShopVideo[] }) {
+function Shelf({
+  title,
+  sub,
+  videos,
+  pageSize,
+}: {
+  title: string;
+  sub: string;
+  videos: ShopVideo[];
+  pageSize?: number;
+}) {
   const ids = useMemo(() => videos.map((v) => v.id), [videos]);
+  const [shown, setShown] = useState(pageSize ?? videos.length);
   return (
     <section className="container-x mt-14">
       <Reveal className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-b border-cocoa-900/10 pb-4">
@@ -40,10 +56,20 @@ function Shelf({ title, sub, videos }: { title: string; sub: string; videos: Sho
         <p className="text-sm text-cocoa-600">{sub}</p>
       </Reveal>
       <div className="mt-6 grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 sm:gap-x-5 lg:grid-cols-4 xl:grid-cols-5">
-        {videos.map((v) => (
+        {videos.slice(0, shown).map((v) => (
           <Card key={v.id} video={v} list={ids} />
         ))}
       </div>
+      {pageSize && videos.length > shown && (
+        <div className="mt-10 flex flex-col items-center gap-2">
+          <button type="button" onClick={() => setShown((n) => n + pageSize)} className="btn-ghost">
+            Show more videos
+          </button>
+          <p className="text-xs text-cocoa-600">
+            Showing {shown} of {videos.length}
+          </p>
+        </div>
+      )}
     </section>
   );
 }
@@ -126,14 +152,18 @@ function Catalog() {
         className="tab-panel mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4 xl:grid-cols-6"
       >
         {items.map((p) => (
-          <a
+          <div
             key={p.id}
-            href={p.url}
-            target="_blank"
-            rel="noreferrer"
-            className="group flex flex-col overflow-hidden rounded-3xl border border-cocoa-900/10 bg-white/70 transition hover:-translate-y-0.5 hover:border-cherry/50 hover:bg-white hover:shadow-soft"
+            className="group relative flex flex-col overflow-hidden rounded-3xl border border-cocoa-900/10 bg-white/70 transition hover:-translate-y-0.5 hover:border-cherry/50 hover:bg-white hover:shadow-soft"
           >
-            <div className="aspect-square overflow-hidden bg-blush-50">
+            <a
+              href={p.url}
+              target="_blank"
+              rel="noreferrer"
+              className="absolute inset-0 z-0"
+              aria-label={`Shop ${shortTitle(p.title)}`}
+            />
+            <div className="pointer-events-none aspect-square overflow-hidden bg-blush-50">
               {p.image ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -148,14 +178,17 @@ function Catalog() {
                 </span>
               )}
             </div>
-            <div className="flex flex-1 flex-col p-3">
+            <div className="pointer-events-none flex flex-1 flex-col p-3">
               <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-cocoa-500">{laneOf(p)}</span>
               <span className="mt-1 line-clamp-2 text-sm font-semibold leading-snug text-cocoa-900">
                 {shortTitle(p.title)}
               </span>
-              <span className="mt-auto pt-2 text-xs font-semibold text-cherry group-hover:underline">Shop it →</span>
+              <span className="mt-auto flex items-center justify-between gap-2 pt-2 text-xs font-semibold">
+                <span className="text-cherry group-hover:underline">Shop it →</span>
+                <WatchLink videoId={p.videoId} handle={p.handle} />
+              </span>
             </div>
-          </a>
+          </div>
         ))}
       </div>
 
@@ -173,10 +206,35 @@ function Catalog() {
   );
 }
 
+/** "▶ Video" on a catalog tile: plays the video it was tagged in. */
+function WatchLink({ videoId, handle }: { videoId: string; handle: string }) {
+  const { open } = useClipModal();
+  const cls =
+    "pointer-events-auto relative z-10 inline-flex items-center gap-1 rounded-full bg-blush-100 px-2 py-0.5 text-[11px] text-cocoa-800 transition hover:bg-blush-200";
+  // Videos on this page open in the lightbox; portfolio-only ones go to TikTok.
+  if (byId.has(videoId)) {
+    return (
+      <button
+        type="button"
+        onClick={() => open(videoId, latestIds.includes(videoId) ? latestIds : [videoId])}
+        className={cls}
+      >
+        <PlayIcon className="h-3 w-3" /> Video
+      </button>
+    );
+  }
+  return (
+    <a href={`https://www.tiktok.com/@${handle}/video/${videoId}`} target="_blank" rel="noreferrer" className={cls}>
+      <PlayIcon className="h-3 w-3" /> Video
+    </a>
+  );
+}
+
 function Card({ video, list }: { video: ShopVideo; list: string[] }) {
   const { open } = useClipModal();
   const clip = toModalClip(video);
   const caption = cleanCaption(video.caption);
+  const products = productsOf(video);
 
   return (
     <article className="flex flex-col">
@@ -219,7 +277,7 @@ function Card({ video, list }: { video: ShopVideo; list: string[] }) {
       </button>
 
       <div className="mt-3 flex flex-col gap-2">
-        {video.products.map((p) => (
+        {products.map((p) => (
           <a
             key={p.id}
             href={p.url}
@@ -250,7 +308,7 @@ function Card({ video, list }: { video: ShopVideo; list: string[] }) {
             </span>
           </a>
         ))}
-        {video.products.length === 0 && (
+        {products.length === 0 && (
           <a
             href={`https://www.tiktok.com/@partidaelena/video/${video.id}`}
             target="_blank"

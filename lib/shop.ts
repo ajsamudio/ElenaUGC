@@ -1,5 +1,6 @@
-// Her pinned + latest @partidaelena videos and the TikTok Shop products tagged
-// in them. Written by `npm run shop` (also runs daily in GitHub Actions).
+// Every @partidaelena video the site knows about (pinned first, then newest)
+// and the catalog of TikTok Shop products tagged in them. Written by
+// `npm run shop` (daily in GitHub Actions) and scripts/backfill-shop.mjs.
 import data from "@/lib/shop.json";
 import { compact } from "@/lib/live";
 import type { ModalClip } from "@/components/ClipModal";
@@ -16,7 +17,7 @@ export type ShopVideo = {
   postedAt?: string;
   views?: number;
   poster: string | null;
-  products: ShopProduct[];
+  productIds: string[]; // into shop.catalog
 };
 
 export const shop = data as { updatedAt?: string; videos: ShopVideo[]; catalog: CatalogProduct[] };
@@ -32,6 +33,12 @@ const lanes: Record<string, string> = {
   Shoes: "Shoes",
   Health: "Wellness",
 };
+const productById = new Map(shop.catalog.map((p) => [p.id, p]));
+
+/** The catalog products tagged in a video, in tag order. */
+export const productsOf = (v: ShopVideo) =>
+  v.productIds.map((id) => productById.get(id)).filter((p): p is CatalogProduct => !!p);
+
 export const laneOf = (p: ShopProduct) => (p.category ? lanes[p.category] ?? p.category : "Other");
 
 /** "YEOREO Women's 2-Piece Workout Set - Off-Shoulder…" → "YEOREO Women's 2-Piece Workout Set". */
@@ -47,7 +54,7 @@ export function cleanCaption(caption: string) {
 
 /** Shapes a shop video for the shared lightbox. */
 export function toModalClip(v: ShopVideo): ModalClip {
-  const p = v.products[0];
+  const p = productsOf(v)[0];
   return {
     id: v.id,
     handle: "partidaelena",

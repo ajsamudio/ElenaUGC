@@ -5,8 +5,8 @@
 //      10 most recent (no login needed).
 //   2. Each video page gives its caption, views and tagged products. The
 //      portfolio clips in lib/content.ts are scanned for products too.
-//   3. Products are added to the catalog and kept there, so it grows each day
-//      (TikTok has no public list of a creator's whole showcase).
+//   3. Videos and products are kept once seen, so both lists grow each day
+//      (TikTok has no public list of a creator's whole feed or showcase).
 //   4. Posters and product photos are saved locally (TikTok's links expire).
 // Results go to lib/shop.json + public/images/shop/.
 //
@@ -144,18 +144,80 @@ export async function saveImage(url, name, width) {
   }
 }
 
-async function main() {
+/** Adds one sighting of a product to the catalog, keeping the newest video it appears in. */
+export function addSighting(catalog, p, videoId, handle, today) {
+  const old = catalog.get(p.id);
+  const newer = !old || BigInt(videoId) >= BigInt(old.videoId);
+  catalog.set(p.id, {
+    ...old,
+    ...(newer ? p : {}),
+    id: p.id,
+    // Keep a photo that's already saved locally.
+    image: old?.image?.startsWith("/") ? old.image : p.image ?? old?.image ?? null,
+    category: p.category ?? old?.category,
+    videoId: newer ? videoId : old.videoId,
+    handle: newer ? handle : old.handle,
+    firstSeen: old?.firstSeen ?? today,
+  });
+}
+
+/** Reads the saved file: every known video (keyed by id) and the catalog. */
+export async function load() {
   const prev = JSON.parse(await readFile(OUT, "utf8").catch(() => "{}"));
-  const prevById = new Map((prev.videos ?? []).map((v) => [v.id, v]));
+  const archive = new Map();
+  for (const v of prev.videos ?? []) {
+    // Older files kept full products on each video; now it's ids into the catalog.
+    const { products, pinned, ...rest } = v;
+    archive.set(v.id, { ...rest, productIds: v.productIds ?? (products ?? []).map((p) => p.id) });
+  }
+  return {
+    prev,
+    archive,
+    catalog: new Map((prev.catalog ?? []).map((p) => [p.id, p])),
+    pinnedIds: (prev.videos ?? []).filter((v) => v.pinned).map((v) => v.id),
+    today: new Date().toISOString().slice(0, 10),
+  };
+}
+
+/** Saves product photos, drops unused images and writes lib/shop.json. */
+export async function save({ prev, archive, catalog, pinnedIds, today }) {
+  const pinned = new Set(pinnedIds);
+  const newestFirst = (a, b) => (BigInt(b.id) > BigInt(a.id) ? 1 : -1);
+  const videos = [
+    ...pinnedIds.filter((id) => archive.has(id)).map((id) => archive.get(id)),
+    ...[...archive.values()].filter((v) => !pinned.has(v.id)).sort(newestFirst),
+  ].map((v) => ({ id: v.id, pinned: pinned.has(v.id), caption: v.caption, postedAt: v.postedAt, views: v.views, poster: v.poster ?? null, productIds: v.productIds ?? [] }));
+
+  const products = [];
+  for (const p of [...catalog.values()].sort((a, b) => (BigInt(b.videoId) > BigInt(a.videoId) ? 1 : -1))) {
+    const remote = p.image?.startsWith("http") ? p.image : null;
+    products.push({ ...p, image: (await saveImage(remote, `p-${p.id}.jpg`)) ?? p.image ?? null });
+  }
+
+  // Drop images nothing uses any more, so the repo doesn't grow forever.
+  const keep = new Set([...videos.map((v) => v.poster), ...products.map((p) => p.image)].filter(Boolean));
+  for (const f of await readdir(IMG_DIR)) {
+    if (!keep.has(`/images/shop/${f}`)) await rm(path.join(IMG_DIR, f));
+  }
+
+  const same = JSON.stringify([videos, products]) === JSON.stringify([prev.videos, prev.catalog]);
+  const out = { updatedAt: same ? prev.updatedAt : today, videos, catalog: products };
+  await writeFile(OUT, JSON.stringify(out, null, 2) + "\n");
+  return { videos: videos.length, products: products.length };
+}
+
+async function main() {
+  const state = await load();
+  const { archive, catalog, today } = state;
   await mkdir(IMG_DIR, { recursive: true });
 
   const list = await videoList();
   const pins = pinnedCount(list.map((v) => v.id));
   console.log(`Found ${list.length} videos (${pins} pinned).`);
+  state.pinnedIds = list.slice(0, pins).map((v) => v.id);
 
-  const videos = [];
   for (const [i, v] of list.entries()) {
-    const old = prevById.get(v.id);
+    const old = archive.get(v.id);
     let d;
     try {
       d = await details(v.id);
@@ -163,47 +225,27 @@ async function main() {
       console.log(`  video – ${v.id} (${e.message}; keeping last value)`);
     }
     const poster = await saveImage(d?.cover || v.originCoverUrl || v.coverUrl, `${v.id}.jpg`, 420);
-    const products = [];
-    for (const p of d?.products ?? old?.products ?? []) {
-      products.push({ ...p, image: (await saveImage(p.image, `p-${p.id}.jpg`)) ?? p.image ?? null });
-    }
-    videos.push({
+    for (const p of d?.products ?? []) addSighting(catalog, p, v.id, HANDLE, today);
+    archive.set(v.id, {
       id: v.id,
-      pinned: i < pins,
       caption: d?.caption ?? old?.caption ?? (v.desc ?? "").trim(),
       postedAt: d?.postedAt ?? old?.postedAt,
       views: d?.views ?? (Number(v.playCount) || old?.views),
       poster: poster ?? old?.poster ?? null,
-      products,
+      productIds: d ? d.products.map((p) => p.id) : old?.productIds ?? [],
     });
-    console.log(`  video ✓ ${v.id}${i < pins ? " (pinned)" : ""} · ${products.length} products`);
+    console.log(`  video ✓ ${v.id}${i < pins ? " (pinned)" : ""} · ${d?.products.length ?? "?"} products`);
     await sleep(300);
   }
 
-  // ── Catalog: every product she's tagged, newest video first ─────────────
-  const today = new Date().toISOString().slice(0, 10);
-  const catalog = new Map((prev.catalog ?? []).map((p) => [p.id, p]));
-  const sighting = (p, videoId, handle) => {
-    const old = catalog.get(p.id);
-    const newer = !old || BigInt(videoId) >= BigInt(old.videoId);
-    catalog.set(p.id, {
-      ...old,
-      ...p,
-      category: p.category ?? old?.category,
-      videoId: newer ? videoId : old.videoId,
-      handle: newer ? handle : old.handle,
-      firstSeen: old?.firstSeen ?? today,
-    });
-  };
-  for (const v of videos) for (const p of v.products) sighting(p, v.id, HANDLE);
-
-  // Portfolio clips (both accounts), a few at a time.
+  // Portfolio clips (both accounts), a few at a time. Products only: these
+  // are curated on the home page, not part of her feed here.
   const content = await readFile(path.join(ROOT, "lib/content.ts"), "utf8");
   const clips = [];
   for (const line of content.split(/\r?\n/)) {
     const id = line.match(/id:\s*"(\d+)"/)?.[1];
     const handle = line.match(/handle:\s*"([\w.]+)"/)?.[1];
-    if (id && handle && !videos.some((v) => v.id === id) && !clips.some((c) => c.id === id)) clips.push({ id, handle });
+    if (id && handle && !list.some((v) => v.id === id) && !clips.some((c) => c.id === id)) clips.push({ id, handle });
   }
   let tagged = 0;
   for (let i = 0; i < clips.length; i += 4) {
@@ -212,7 +254,7 @@ async function main() {
         try {
           const d = await details(id, handle);
           if (d.products.length) tagged++;
-          for (const p of d.products) sighting(p, id, handle);
+          for (const p of d.products) addSighting(catalog, p, id, handle, today);
         } catch (e) {
           console.log(`  portfolio – ${id} (${e.message})`);
         }
@@ -222,24 +264,8 @@ async function main() {
   }
   console.log(`Scanned ${clips.length} portfolio clips (${tagged} with products).`);
 
-  const products = [];
-  for (const p of [...catalog.values()].sort((a, b) => (BigInt(b.videoId) > BigInt(a.videoId) ? 1 : -1))) {
-    const remote = p.image?.startsWith("http") ? p.image : null;
-    products.push({ ...p, image: (await saveImage(remote, `p-${p.id}.jpg`)) ?? p.image ?? null });
-  }
-
-  // Drop images nothing uses any more, so the repo doesn't grow forever.
-  const keep = new Set(
-    [...videos.flatMap((v) => [v.poster, ...v.products.map((p) => p.image)]), ...products.map((p) => p.image)].filter(Boolean)
-  );
-  for (const f of await readdir(IMG_DIR)) {
-    if (!keep.has(`/images/shop/${f}`)) await rm(path.join(IMG_DIR, f));
-  }
-
-  const same = JSON.stringify([videos, products]) === JSON.stringify([prev.videos, prev.catalog]);
-  const out = { updatedAt: same ? prev.updatedAt : today, videos, catalog: products };
-  await writeFile(OUT, JSON.stringify(out, null, 2) + "\n");
-  console.log(`Done: ${videos.length} videos, ${products.length} products in the catalog.`);
+  const n = await save(state);
+  console.log(`Done: ${n.videos} videos, ${n.products} products in the catalog.`);
 }
 
 // Only run when executed directly (scripts/backfill-shop.mjs imports the helpers).
