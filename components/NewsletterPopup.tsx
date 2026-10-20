@@ -82,13 +82,13 @@ export default function NewsletterPopup() {
           className="modal-in pointer-events-auto relative grid w-full max-w-[52rem] overflow-hidden rounded-[2rem] bg-cream shadow-[0_40px_80px_-24px_rgba(42,26,23,0.45)] sm:grid-cols-[0.95fr_1.05fr] sm:rounded-[2.5rem]"
         >
           {/* photo */}
-          <div className="relative h-36 sm:h-auto sm:min-h-[30rem]">
+          <div className="relative h-52 sm:h-auto sm:min-h-[30rem]">
             <Image
               src="/images/portrait.jpg"
               alt="Elena smiling"
               fill
               sizes="(min-width: 640px) 26rem, 100vw"
-              className="object-cover object-[50%_25%]"
+              className="object-cover object-[50%_22%] sm:object-[50%_25%]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-cocoa-900/40 via-transparent to-transparent" />
             <span className="absolute bottom-4 left-4 hidden rounded-full bg-cream/90 px-3 py-1.5 text-xs font-medium text-cocoa-800 backdrop-blur sm:inline-flex">
@@ -97,7 +97,7 @@ export default function NewsletterPopup() {
           </div>
 
           {/* copy + form */}
-          <div className="relative px-6 pb-7 pt-6 sm:px-10 sm:py-12">
+          <div className="relative px-6 pb-6 pt-5 sm:px-10 sm:py-12">
 
             <p className="eyebrow">The newsletter</p>
 
