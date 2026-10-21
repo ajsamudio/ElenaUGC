@@ -25,7 +25,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
 
@@ -38,8 +38,11 @@ jobs:
         run: command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
 
       # The scripts have no dependencies, so no npm install needed.
-      - run: node scripts/fetch-stats.mjs
+      # Shop runs first: the stats step's ~50 TikTok requests can get the next
+      # requests rate limited (HTTP 429), and the shop's newest-videos list
+      # matters most. Both scripts keep the last saved data if TikTok blocks them.
       - run: node scripts/fetch-shop.mjs
+      - run: node scripts/fetch-stats.mjs
 
       - name: Commit if changed
         run: |

@@ -42,10 +42,20 @@ function has(cmd, flag = "-version") {
 }
 const FFMPEG = has("ffmpeg");
 
+// TikTok answers 429 (rate limited) or 5xx now and then; wait and try again
+// before giving up, so one busy moment doesn't skip a whole refresh.
+const RETRY_WAITS = [20_000, 60_000, 120_000];
+
 async function page(url) {
-  const res = await fetch(url, { headers: HEADERS });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return res.text();
+  for (let attempt = 0; ; attempt++) {
+    const res = await fetch(url, { headers: HEADERS });
+    if (res.ok) return res.text();
+    const retryable = res.status === 429 || res.status >= 500;
+    if (!retryable || attempt >= RETRY_WAITS.length) throw new Error(`HTTP ${res.status}`);
+    const wait = RETRY_WAITS[attempt];
+    console.log(`  HTTP ${res.status} from TikTok; retrying in ${wait / 1000}s`);
+    await sleep(wait);
+  }
 }
 
 function script(html, id) {
