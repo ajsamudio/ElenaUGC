@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-10-22",
   "videos": [
     {
       "id": "7696579262031170846",
       "pinned": true,
       "caption": "#activewear that’s functional>",
       "postedAt": "2026-10-14",
-      "views": 665800,
-      "viewsAt": "2026-10-21T23:21:10.454Z",
+      "views": 747100,
+      "viewsAt": "2026-10-22T04:48:21.515Z",
       "poster": "/images/shop/7696579262031170846.jpg",
       "productIds": [
         "1732538908900626467"
@@ -18,8 +18,8 @@
       "pinned": true,
       "caption": "I love these double lined sets so much! Perfect for everyday wear or Pilates 🖤 #yeoreo",
       "postedAt": "2026-10-09",
-      "views": 671900,
-      "viewsAt": "2026-10-21T23:21:11.497Z",
+      "views": 678300,
+      "viewsAt": "2026-10-22T04:48:22.290Z",
       "poster": "/images/shop/7694808144492432670.jpg",
       "productIds": [
         "1732563365006840793"
@@ -31,10 +31,70 @@
       "caption": "⭐️ #dreamparis #balletflats",
       "postedAt": "2026-10-01",
       "views": 2700000,
-      "viewsAt": "2026-10-21T23:21:12.363Z",
+      "viewsAt": "2026-10-22T04:48:23.121Z",
       "poster": "/images/shop/7691813384320273694.jpg",
       "productIds": [
         "1729440610297484172"
+      ]
+    },
+    {
+      "id": "7699344646983437599",
+      "pinned": false,
+      "caption": "",
+      "postedAt": "2026-10-22",
+      "views": 46,
+      "viewsAt": "2026-10-22T04:48:24.091Z",
+      "poster": "/images/shop/7699344646983437599.jpg",
+      "productIds": [
+        "1732708826875072535"
+      ]
+    },
+    {
+      "id": "7699301717770292511",
+      "pinned": false,
+      "caption": "#rainjacket of my dreams",
+      "postedAt": "2026-10-22",
+      "views": 366,
+      "viewsAt": "2026-10-22T04:48:25.402Z",
+      "poster": "/images/shop/7699301717770292511.jpg",
+      "productIds": [
+        "1729476876389094735"
+      ]
+    },
+    {
+      "id": "7699288653494897951",
+      "pinned": false,
+      "caption": "#activewearforwomen #pilatesoutfit",
+      "postedAt": "2026-10-22",
+      "views": 366,
+      "viewsAt": "2026-10-22T04:48:26.341Z",
+      "poster": "/images/shop/7699288653494897951.jpg",
+      "productIds": [
+        "1732531869259960343"
+      ]
+    },
+    {
+      "id": "7699279650681343245",
+      "pinned": false,
+      "caption": "new #oxyshred  🍍🍓🍬✨ !!! I know my gym girls LOVE their oxyshred #ehplabs #preworkoutgummies #preworkout #oxyshredreview",
+      "postedAt": "2026-10-22",
+      "views": 304,
+      "viewsAt": "2026-10-22T04:48:27.265Z",
+      "poster": "/images/shop/7699279650681343245.jpg",
+      "productIds": [
+        "1732749183816537082"
+      ]
+    },
+    {
+      "id": "7699266939998326046",
+      "pinned": false,
+      "caption": "@Tower 28 Beauty THANK YOU for this ✨ #tower28 #serumfoundation #glowyskin #softglam",
+      "postedAt": "2026-10-21",
+      "views": 426,
+      "viewsAt": "2026-10-22T04:48:28.111Z",
+      "poster": "/images/shop/7699266939998326046.jpg",
+      "productIds": [
+        "1732538005269942470"
       ]
     },
     {
@@ -42,8 +102,8 @@
       "pinned": false,
       "caption": "talk about a set that’s actually functional! 🪻✨ #activewearforwomen #pilatesoutfit",
       "postedAt": "2026-10-21",
-      "views": 941,
-      "viewsAt": "2026-10-21T23:21:13.242Z",
+      "views": 6072,
+      "viewsAt": "2026-10-22T04:48:28.964Z",
       "poster": "/images/shop/7699184111046495519.jpg",
       "productIds": [
         "1732538908900626467"
@@ -54,8 +114,8 @@
       "pinned": false,
       "caption": "#activewearforwomen #pilatesoutfit",
       "postedAt": "2026-10-21",
-      "views": 731,
-      "viewsAt": "2026-10-21T23:21:14.076Z",
+      "views": 1102,
+      "viewsAt": "2026-10-22T04:48:29.746Z",
       "poster": "/images/shop/7699144984058006814.jpg",
       "productIds": [
         "1732531869259960343"
@@ -66,8 +126,8 @@
       "pinned": false,
       "caption": "#activewearforwomen #pilatesoutfit",
       "postedAt": "2026-10-21",
-      "views": 479,
-      "viewsAt": "2026-10-21T23:21:14.839Z",
+      "views": 690,
+      "viewsAt": "2026-10-22T04:48:30.545Z",
       "poster": "/images/shop/7699132396603444511.jpg",
       "productIds": [
         "1732477348196159511"
@@ -78,8 +138,8 @@
       "pinned": false,
       "caption": "#csb #activewearforwomen",
       "postedAt": "2026-10-21",
-      "views": 409,
-      "viewsAt": "2026-10-21T23:21:15.596Z",
+      "views": 656,
+      "viewsAt": "2026-10-22T04:48:31.221Z",
       "poster": "/images/shop/7699130904739892510.jpg",
       "productIds": [
         "1732350540696424474"
@@ -90,8 +150,8 @@
       "pinned": false,
       "caption": "#bamboocotton #pajamas #hanespajamas #cutepjs",
       "postedAt": "2026-10-21",
-      "views": 344,
-      "viewsAt": "2026-10-21T23:21:16.416Z",
+      "views": 1265,
+      "viewsAt": "2026-10-22T04:48:31.941Z",
       "poster": "/images/shop/7699130251636378910.jpg",
       "productIds": [
         "1732538050247431140"
@@ -330,8 +390,8 @@
       "pinned": false,
       "caption": "#yeoreo #capris #activewearset",
       "postedAt": "2026-10-20",
-      "views": 851,
-      "viewsAt": "2026-10-21T02:34:12.663Z",
+      "views": 3629,
+      "viewsAt": "2026-10-22T04:48:37.288Z",
       "poster": "/images/shop/7698802960746269983.jpg",
       "productIds": [
         "1732563365006840793"
@@ -4603,8 +4663,8 @@
       "pinned": false,
       "caption": "sooo good ✨",
       "postedAt": "2026-08-27",
-      "views": 15700,
-      "viewsAt": "2026-10-20T19:54:45.601Z",
+      "views": 15800,
+      "viewsAt": "2026-10-22T04:48:33.075Z",
       "poster": "/images/shop/7678840055204482334.jpg",
       "productIds": [
         "1732155008380867173"
@@ -4615,8 +4675,8 @@
       "pinned": false,
       "caption": "#skims #skimstryon",
       "postedAt": "2026-08-27",
-      "views": 142300,
-      "viewsAt": "2026-10-20T19:54:45.771Z",
+      "views": 142800,
+      "viewsAt": "2026-10-22T04:48:32.946Z",
       "poster": "/images/shop/7678762403928034591.jpg",
       "productIds": [
         "1732540036000879461"
@@ -4627,8 +4687,8 @@
       "pinned": false,
       "caption": "🩷✨ #yeoreo #activewearforwomen #layering #doublelinedtop #pilatesoutfit",
       "postedAt": "2026-08-27",
-      "views": 526200,
-      "viewsAt": "2026-10-20T19:54:45.606Z",
+      "views": 531400,
+      "viewsAt": "2026-10-22T04:48:33.095Z",
       "poster": "/images/shop/7678760668111080734.jpg",
       "productIds": [
         "1732068087703311321"
@@ -4640,7 +4700,7 @@
       "caption": "soft, stretchy, double lined, and afforable 🩵🩷🤎🤍 #yeoreo #activewearforwomen #layering #doublelinedtop #pilatesoutfit",
       "postedAt": "2026-08-27",
       "views": 1800000,
-      "viewsAt": "2026-10-20T19:54:45.671Z",
+      "viewsAt": "2026-10-22T04:48:33.447Z",
       "poster": "/images/shop/7678758337982270750.jpg",
       "productIds": [
         "1732068087703311321"
@@ -4651,8 +4711,8 @@
       "pinned": false,
       "caption": "✨🤍 #waisttraining #waisttrainer #snatched #waist",
       "postedAt": "2026-08-27",
-      "views": 139700,
-      "viewsAt": "2026-10-20T19:54:46.675Z",
+      "views": 140700,
+      "viewsAt": "2026-10-22T04:48:34.510Z",
       "poster": "/images/shop/7678750265817713950.jpg",
       "productIds": [
         "1731262278839865452"
@@ -4663,8 +4723,8 @@
       "pinned": false,
       "caption": "Obsessed 🤎✨",
       "postedAt": "2026-08-26",
-      "views": 174600,
-      "viewsAt": "2026-10-20T19:54:46.557Z",
+      "views": 175500,
+      "viewsAt": "2026-10-22T04:48:34.271Z",
       "poster": "/images/shop/7678435001519705374.jpg",
       "productIds": [
         "1732365642750071262"
@@ -4675,8 +4735,8 @@
       "pinned": false,
       "caption": "wearing a size small ✨🤍",
       "postedAt": "2026-08-26",
-      "views": 136000,
-      "viewsAt": "2026-10-20T19:54:46.544Z",
+      "views": 137800,
+      "viewsAt": "2026-10-22T04:48:34.293Z",
       "poster": "/images/shop/7678428415845879070.jpg",
       "productIds": [
         "1732454638305316908"
@@ -4687,8 +4747,8 @@
       "pinned": false,
       "caption": "wearing a size small 🤍 #yogaset #matchingset #activewearforwomen",
       "postedAt": "2026-08-26",
-      "views": 139500,
-      "viewsAt": "2026-10-20T19:54:46.637Z",
+      "views": 143400,
+      "viewsAt": "2026-10-22T04:48:34.250Z",
       "poster": "/images/shop/7678403505085795614.jpg",
       "productIds": [
         "1732455392115789847"
@@ -4699,8 +4759,8 @@
       "pinned": false,
       "caption": "love my #pacsunjeans #pacsunlowrisejeans #lowrisebaggyjeans #cutejeans #outfitinspo",
       "postedAt": "2026-08-25",
-      "views": 50900,
-      "viewsAt": "2026-10-20T19:54:47.507Z",
+      "views": 52200,
+      "viewsAt": "2026-10-22T04:48:35.351Z",
       "poster": "/images/shop/7678005087230381342.jpg",
       "productIds": [
         "1732491716158067354"
@@ -4711,8 +4771,8 @@
       "pinned": false,
       "caption": "✨ #ciderhaul #cider #romper #chicstyle #quietluxury",
       "postedAt": "2026-08-24",
-      "views": 256800,
-      "viewsAt": "2026-10-20T19:54:47.510Z",
+      "views": 260200,
+      "viewsAt": "2026-10-22T04:48:35.441Z",
       "poster": "/images/shop/7677702001852943647.jpg",
       "productIds": [
         "1729498429420377175"
@@ -4724,7 +4784,7 @@
       "caption": "👣🤍 #fivetoeshoes #fivefingershoes #vibramfivefingers",
       "postedAt": "2026-08-24",
       "views": 105400,
-      "viewsAt": "2026-10-20T19:54:47.654Z",
+      "viewsAt": "2026-10-22T04:48:35.421Z",
       "poster": "/images/shop/7677667127423241503.jpg",
       "productIds": []
     },
@@ -4733,8 +4793,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-24",
-      "views": 108100,
-      "viewsAt": "2026-10-20T19:54:47.556Z",
+      "views": 108500,
+      "viewsAt": "2026-10-22T04:48:35.322Z",
       "poster": "/images/shop/7677650645851131167.jpg",
       "productIds": [
         "1731748247366767371"
@@ -4746,7 +4806,7 @@
       "caption": "#fivefingershoes #fivetoeshoes #toeshoes #balletshoes #vibramfivefingers",
       "postedAt": "2026-08-24",
       "views": 97200,
-      "viewsAt": "2026-10-20T19:54:48.561Z",
+      "viewsAt": "2026-10-22T04:48:36.244Z",
       "poster": "/images/shop/7677639543419358494.jpg",
       "productIds": []
     },
@@ -4755,8 +4815,8 @@
       "pinned": false,
       "caption": "5’6 125lbs wearing a small 🩶🩵✨",
       "postedAt": "2026-08-23",
-      "views": 113800,
-      "viewsAt": "2026-10-20T19:54:48.993Z",
+      "views": 117800,
+      "viewsAt": "2026-10-22T04:48:36.298Z",
       "poster": "/images/shop/7677357380811656478.jpg",
       "productIds": [
         "1732428276349047232"
@@ -4768,7 +4828,7 @@
       "caption": "#balletflats #dreamparis #balletflatsoutfit #comfyflats",
       "postedAt": "2026-08-23",
       "views": 1100000,
-      "viewsAt": "2026-10-20T19:54:48.494Z",
+      "viewsAt": "2026-10-22T04:48:36.286Z",
       "poster": "/images/shop/7677318504856456478.jpg",
       "productIds": [
         "1729440610297484172"
@@ -4779,8 +4839,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-23",
-      "views": 364500,
-      "viewsAt": "2026-10-20T19:54:48.565Z",
+      "views": 372900,
+      "viewsAt": "2026-10-22T04:48:36.513Z",
       "poster": "/images/shop/7677271827940429086.jpg",
       "productIds": [
         "1732412928253268991"
@@ -4791,8 +4851,8 @@
       "pinned": false,
       "caption": "it’s giving HOURGLASS wearing a size small queens 🤎",
       "postedAt": "2026-08-22",
-      "views": 250400,
-      "viewsAt": "2026-10-21T02:34:13.445Z",
+      "views": 253000,
+      "viewsAt": "2026-10-22T04:48:37.352Z",
       "poster": "/images/shop/7676940267575987487.jpg",
       "productIds": [
         "1732109097590231862"
@@ -4803,8 +4863,8 @@
       "pinned": false,
       "caption": "wearing a size small 🤎#gaphoodie",
       "postedAt": "2026-08-22",
-      "views": 42500,
-      "viewsAt": "2026-10-21T02:34:13.439Z",
+      "views": 43000,
+      "viewsAt": "2026-10-22T04:48:37.361Z",
       "poster": "/images/shop/7676861600590040350.jpg",
       "productIds": [
         "1731048275509285494"
@@ -4815,8 +4875,8 @@
       "pinned": false,
       "caption": "#glasses #cuteglasses",
       "postedAt": "2026-08-21",
-      "views": 134200,
-      "viewsAt": "2026-10-21T02:34:13.421Z",
+      "views": 136200,
+      "viewsAt": "2026-10-22T04:48:37.342Z",
       "poster": "/images/shop/7676589942163737887.jpg",
       "productIds": [
         "1729469569378259329"
@@ -4827,8 +4887,8 @@
       "pinned": false,
       "caption": "✨💖 #capris #gymoutfit #gymgirl #pilatesoutfit #leggings",
       "postedAt": "2026-08-20",
-      "views": 150600,
-      "viewsAt": "2026-10-21T02:34:13.537Z",
+      "views": 152100,
+      "viewsAt": "2026-10-22T04:48:38.153Z",
       "poster": "/images/shop/7676205339586333983.jpg",
       "productIds": [
         "1732466158386123082"
@@ -4839,8 +4899,8 @@
       "pinned": false,
       "caption": "💖 #yeoreo #layeringtops #activewearforwomen #womenstops #pilatesoutfit",
       "postedAt": "2026-08-20",
-      "views": 241200,
-      "viewsAt": "2026-10-21T02:34:14.359Z",
+      "views": 242600,
+      "viewsAt": "2026-10-22T04:48:38.195Z",
       "poster": "/images/shop/7676202830419512607.jpg",
       "productIds": [
         "1732068087703311321"
@@ -4851,8 +4911,8 @@
       "pinned": false,
       "caption": "Replying to @nathgicodaily #balletflats #dreamparisshoes #cuteflats #flats #fallshoes",
       "postedAt": "2026-08-20",
-      "views": 249100,
-      "viewsAt": "2026-10-21T02:34:14.561Z",
+      "views": 249500,
+      "viewsAt": "2026-10-22T04:48:39.461Z",
       "poster": "/images/shop/7676185998174244126.jpg",
       "productIds": [
         "1729440610297484172"
@@ -4863,8 +4923,8 @@
       "pinned": false,
       "caption": "wearing a small 🤍",
       "postedAt": "2026-08-19",
-      "views": 60300,
-      "viewsAt": "2026-10-21T02:34:14.461Z",
+      "views": 61200,
+      "viewsAt": "2026-10-22T04:48:38.408Z",
       "poster": "/images/shop/7675825205498940702.jpg",
       "productIds": [
         "1732446661994385431"
@@ -4875,8 +4935,8 @@
       "pinned": false,
       "caption": "#2pcset #yogaset #yogaoutfit #pilatesoutfit #capris",
       "postedAt": "2026-08-19",
-      "views": 311200,
-      "viewsAt": "2026-10-21T02:34:14.448Z",
+      "views": 314700,
+      "viewsAt": "2026-10-22T04:48:38.627Z",
       "poster": "/images/shop/7675821794602863903.jpg",
       "productIds": [
         "1732477605474504727"
@@ -4887,8 +4947,8 @@
       "pinned": false,
       "caption": "I can workout, chill, run errands EVERYTHING in these capri sets, love all the colors & I wear a size small 🖤",
       "postedAt": "2026-08-19",
-      "views": 209400,
-      "viewsAt": "2026-10-21T02:34:16.679Z",
+      "views": 209700,
+      "viewsAt": "2026-10-22T04:48:40.593Z",
       "poster": "/images/shop/7675780322855882014.jpg",
       "productIds": [
         "1732387656489668631"
@@ -4899,8 +4959,8 @@
       "pinned": false,
       "caption": "wearing a small 🩶",
       "postedAt": "2026-08-19",
-      "views": 89400,
-      "viewsAt": "2026-10-21T02:34:15.568Z",
+      "views": 89500,
+      "viewsAt": "2026-10-22T04:48:39.424Z",
       "poster": "/images/shop/7675779040132746527.jpg",
       "productIds": [
         "1732531745491357719"
@@ -4912,7 +4972,7 @@
       "caption": "#bodysuitshapewear #bodysuit #seamlessbodysuit",
       "postedAt": "2026-08-19",
       "views": 1100000,
-      "viewsAt": "2026-10-21T02:34:15.435Z",
+      "viewsAt": "2026-10-22T04:48:39.448Z",
       "poster": "/images/shop/7675762586670861599.jpg",
       "productIds": [
         "1732109097590231862"
@@ -4923,8 +4983,8 @@
       "pinned": false,
       "caption": "#fdr #sweatpants #tracksuit #sweatpantsoutfit",
       "postedAt": "2026-08-19",
-      "views": 49400,
-      "viewsAt": "2026-10-21T02:34:15.514Z",
+      "views": 49900,
+      "viewsAt": "2026-10-22T04:48:39.445Z",
       "poster": "/images/shop/7675757628714126622.jpg",
       "productIds": [
         "1732365642750071262"
@@ -4935,8 +4995,8 @@
       "pinned": false,
       "caption": "sized up for these and thank gosh I did 🩵",
       "postedAt": "2026-08-19",
-      "views": 40800,
-      "viewsAt": "2026-10-21T02:34:18.195Z",
+      "views": 41000,
+      "viewsAt": "2026-10-22T04:48:41.496Z",
       "poster": "/images/shop/7675600182053965087.jpg",
       "productIds": [
         "1732248618598961579"
@@ -4947,8 +5007,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-19",
-      "views": 101800,
-      "viewsAt": "2026-10-21T02:34:17.767Z",
+      "views": 102100,
+      "viewsAt": "2026-10-22T04:48:40.336Z",
       "poster": "/images/shop/7675598042984189214.jpg",
       "productIds": [
         "1732491727387857562"
@@ -4960,7 +5020,7 @@
       "caption": "Fits EXACLTY like impact",
       "postedAt": "2026-08-17",
       "views": 87100,
-      "viewsAt": "2026-10-21T02:34:17.531Z",
+      "viewsAt": "2026-10-22T04:48:40.268Z",
       "poster": "/images/shop/7675115006630874399.jpg",
       "productIds": []
     },
@@ -4969,8 +5029,8 @@
       "pinned": false,
       "caption": "5’6 125lbs and I sized up to a 27 for these ⭐️ #revicepartner #revicedenim #revicejeans #lowrisejeans",
       "postedAt": "2026-08-17",
-      "views": 70400,
-      "viewsAt": "2026-10-21T02:34:17.779Z",
+      "views": 70700,
+      "viewsAt": "2026-10-22T04:48:40.254Z",
       "poster": "/images/shop/7675057708331978015.jpg",
       "productIds": [
         "1732248618598961579"
@@ -4981,8 +5041,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-17",
-      "views": 135100,
-      "viewsAt": "2026-10-21T02:34:19.079Z",
+      "views": 136100,
+      "viewsAt": "2026-10-22T04:48:41.383Z",
       "poster": "/images/shop/7675051428859137311.jpg",
       "productIds": [
         "1732480910459966106"
@@ -4993,8 +5053,8 @@
       "pinned": false,
       "caption": "5’6 125lb wearing a size 25 🤍 #pacsunjeans #lowrisebaggyjeans",
       "postedAt": "2026-08-17",
-      "views": 36400,
-      "viewsAt": "2026-10-21T02:34:19.071Z",
+      "views": 37000,
+      "viewsAt": "2026-10-22T04:48:41.394Z",
       "poster": "/images/shop/7675003128953015582.jpg",
       "productIds": [
         "1732480910459966106"
@@ -5006,7 +5066,7 @@
       "caption": "#balletflats #flatshoes #fallshoes #chicstyle",
       "postedAt": "2026-08-16",
       "views": 1100000,
-      "viewsAt": "2026-10-21T02:34:19.081Z",
+      "viewsAt": "2026-10-22T04:48:41.422Z",
       "poster": "/images/shop/7674675443248712991.jpg",
       "productIds": [
         "1729440610297484172"
@@ -5017,8 +5077,8 @@
       "pinned": false,
       "caption": "sooo good 🩶🖤 #2pieceset #yogaset #activewearforwomen",
       "postedAt": "2026-08-16",
-      "views": 72200,
-      "viewsAt": "2026-10-21T02:34:19.086Z",
+      "views": 72600,
+      "viewsAt": "2026-10-22T04:48:42.338Z",
       "poster": "/images/shop/7674674667143187743.jpg",
       "productIds": [
         "1732531869259960343"
@@ -5029,8 +5089,8 @@
       "pinned": false,
       "caption": "and loves me ofc 🩵wearing a small ⭐️ #lowrisepants #cutejeans",
       "postedAt": "2026-08-16",
-      "views": 275900,
-      "viewsAt": "2026-10-21T02:34:20.501Z",
+      "views": 277400,
+      "viewsAt": "2026-10-22T04:48:43.213Z",
       "poster": "/images/shop/7674666842195234079.jpg",
       "productIds": [
         "1732428276349047232"
@@ -5041,8 +5101,8 @@
       "pinned": false,
       "caption": "⭐️💗 #2pieceset #yogaset #activewearforwomen",
       "postedAt": "2026-08-16",
-      "views": 189000,
-      "viewsAt": "2026-10-21T02:34:20.125Z",
+      "views": 194800,
+      "viewsAt": "2026-10-22T04:48:42.359Z",
       "poster": "/images/shop/7674664663501540639.jpg",
       "productIds": [
         "1732534686415229885"
@@ -5053,8 +5113,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-16",
-      "views": 195900,
-      "viewsAt": "2026-10-21T02:34:19.953Z",
+      "views": 196000,
+      "viewsAt": "2026-10-22T04:48:42.376Z",
       "poster": "/images/shop/7674661643095149855.jpg",
       "productIds": [
         "1732464677086925407"
@@ -5065,8 +5125,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-15",
-      "views": 204800,
-      "viewsAt": "2026-10-21T02:34:20.044Z",
+      "views": 205200,
+      "viewsAt": "2026-10-22T04:48:42.320Z",
       "poster": "/images/shop/7674311166457351455.jpg",
       "productIds": [
         "1732317476791357903"
@@ -5077,8 +5137,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-15",
-      "views": 98400,
-      "viewsAt": "2026-10-21T02:34:21.452Z",
+      "views": 98600,
+      "viewsAt": "2026-10-22T04:48:43.170Z",
       "poster": "/images/shop/7674307989959937310.jpg",
       "productIds": [
         "1732428276349047232"
@@ -5089,8 +5149,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-15",
-      "views": 40700,
-      "viewsAt": "2026-10-21T02:34:21.494Z",
+      "views": 41300,
+      "viewsAt": "2026-10-22T04:48:44.089Z",
       "poster": "/images/shop/7674285102108560670.jpg",
       "productIds": [
         "1732484016161329325"
@@ -5101,8 +5161,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-15",
-      "views": 69900,
-      "viewsAt": "2026-10-21T02:34:21.369Z",
+      "views": 71100,
+      "viewsAt": "2026-10-22T04:48:43.190Z",
       "poster": "/images/shop/7674274605799836959.jpg",
       "productIds": [
         "1731393111855239764"
@@ -5113,8 +5173,8 @@
       "pinned": false,
       "caption": "literally DRENCHED and the top stayed up the whole time 🩶 #hotpilates #pilatesoutfit #activewearset",
       "postedAt": "2026-08-14",
-      "views": 52300,
-      "viewsAt": "2026-10-21T02:34:21.428Z",
+      "views": 52400,
+      "viewsAt": "2026-10-22T04:48:43.259Z",
       "poster": "/images/shop/7673965186767670559.jpg",
       "productIds": [
         "1732531869259960343"
@@ -5125,8 +5185,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-13",
-      "views": 48600,
-      "viewsAt": "2026-10-21T02:34:22.528Z",
+      "views": 49000,
+      "viewsAt": "2026-10-22T04:48:44.962Z",
       "poster": "/images/shop/7673586383134493982.jpg",
       "productIds": [
         "1732514978979156360"
@@ -5138,7 +5198,7 @@
       "caption": "wearing a small ⭐️#cider #lowrisebaggyjeans #lowrisegauchos #gauchopants #capripants",
       "postedAt": "2026-08-13",
       "views": 60600,
-      "viewsAt": "2026-10-21T02:34:22.369Z",
+      "viewsAt": "2026-10-22T04:48:44.091Z",
       "poster": "/images/shop/7673544788737625374.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5149,8 +5209,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-13",
-      "views": 153000,
-      "viewsAt": "2026-10-21T02:34:22.405Z",
+      "views": 156800,
+      "viewsAt": "2026-10-22T04:48:44.055Z",
       "poster": "/images/shop/7673541598659104031.jpg",
       "productIds": [
         "1731748247366767371"
@@ -5161,8 +5221,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-13",
-      "views": 398600,
-      "viewsAt": "2026-10-21T02:34:22.403Z",
+      "views": 399500,
+      "viewsAt": "2026-10-22T04:48:44.086Z",
       "poster": "/images/shop/7673536063872257310.jpg",
       "productIds": [
         "1732531708977778711"
@@ -5173,7 +5233,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:23.356Z",
+      "viewsAt": "2026-10-22T04:48:44.900Z",
       "poster": null,
       "productIds": []
     },
@@ -5183,7 +5243,7 @@
       "caption": "",
       "postedAt": "2026-08-13",
       "views": 190700,
-      "viewsAt": "2026-10-21T02:34:23.415Z",
+      "viewsAt": "2026-10-22T04:48:45.782Z",
       "poster": "/images/shop/7673518974209969438.jpg",
       "productIds": []
     },
@@ -5192,8 +5252,8 @@
       "pinned": false,
       "caption": "literally own this in 5 colors 💐wearing a small 🩵 #capris #activewearforwomen #2pcset",
       "postedAt": "2026-08-12",
-      "views": 81900,
-      "viewsAt": "2026-10-21T02:34:23.362Z",
+      "views": 82400,
+      "viewsAt": "2026-10-22T04:48:44.867Z",
       "poster": "/images/shop/7673172243995774239.jpg",
       "productIds": [
         "1732387656489668631"
@@ -5204,8 +5264,8 @@
       "pinned": false,
       "caption": "#cider #capris #gauchos #bermudashorts",
       "postedAt": "2026-08-11",
-      "views": 508700,
-      "viewsAt": "2026-10-21T02:34:23.394Z",
+      "views": 509000,
+      "viewsAt": "2026-10-22T04:48:44.902Z",
       "poster": "/images/shop/7672904325730946334.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5216,8 +5276,8 @@
       "pinned": false,
       "caption": "⭐️⭐️⭐️",
       "postedAt": "2026-08-11",
-      "views": 71200,
-      "viewsAt": "2026-10-21T02:34:24.430Z",
+      "views": 71300,
+      "viewsAt": "2026-10-22T04:48:46.825Z",
       "poster": "/images/shop/7672903233081232671.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5228,8 +5288,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-11",
-      "views": 299900,
-      "viewsAt": "2026-10-21T02:34:24.325Z",
+      "views": 300700,
+      "viewsAt": "2026-10-22T04:48:45.771Z",
       "poster": "/images/shop/7672862586748013854.jpg",
       "productIds": [
         "1732274049022201943"
@@ -5240,8 +5300,8 @@
       "pinned": false,
       "caption": "10/10 from me ! ⭐️ wearing a small in both top and bottom #softmotion #activewearforwomen #workoutsets",
       "postedAt": "2026-08-11",
-      "views": 214000,
-      "viewsAt": "2026-10-21T02:34:24.344Z",
+      "views": 216200,
+      "viewsAt": "2026-10-22T04:48:45.884Z",
       "poster": "/images/shop/7672858015367793951.jpg",
       "productIds": [
         "1731668622971539879"
@@ -5252,8 +5312,8 @@
       "pinned": false,
       "caption": "#loungewear boss",
       "postedAt": "2026-08-11",
-      "views": 250400,
-      "viewsAt": "2026-10-21T02:34:24.328Z",
+      "views": 252400,
+      "viewsAt": "2026-10-22T04:48:45.777Z",
       "poster": "/images/shop/7672851531359718687.jpg",
       "productIds": [
         "1731748247366767371"
@@ -5264,8 +5324,8 @@
       "pinned": false,
       "caption": "#comfyrobe #fluffyrobe #robe",
       "postedAt": "2026-08-11",
-      "views": 164200,
-      "viewsAt": "2026-10-21T02:34:25.574Z",
+      "views": 164500,
+      "viewsAt": "2026-10-22T04:48:47.640Z",
       "poster": "/images/shop/7672850264453352734.jpg",
       "productIds": [
         "1731748247366767371"
@@ -5276,8 +5336,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-11",
-      "views": 255100,
-      "viewsAt": "2026-10-21T02:34:25.275Z",
+      "views": 255300,
+      "viewsAt": "2026-10-22T04:48:46.703Z",
       "poster": "/images/shop/7672832511067622687.jpg",
       "productIds": [
         "1732470262456357534"
@@ -5289,7 +5349,7 @@
       "caption": "",
       "postedAt": "2026-08-11",
       "views": 168100,
-      "viewsAt": "2026-10-21T02:34:25.302Z",
+      "viewsAt": "2026-10-22T04:48:46.753Z",
       "poster": "/images/shop/7672591688417742110.jpg",
       "productIds": []
     },
@@ -5299,7 +5359,7 @@
       "caption": "⭐️🖤 so good #edikted #capris",
       "postedAt": "2026-08-10",
       "views": 70700,
-      "viewsAt": "2026-10-21T02:34:25.242Z",
+      "viewsAt": "2026-10-22T04:48:46.724Z",
       "poster": "/images/shop/7672527217284353310.jpg",
       "productIds": [
         "1732500413267284130"
@@ -5310,8 +5370,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-10",
-      "views": 835000,
-      "viewsAt": "2026-10-21T02:34:26.519Z",
+      "views": 836400,
+      "viewsAt": "2026-10-22T04:48:47.712Z",
       "poster": "/images/shop/7672496756571065630.jpg",
       "productIds": [
         "1732503155077124119"
@@ -5323,7 +5383,7 @@
       "caption": "🤎 #activewearforwomen #impact #gymoutfit #gymgirls",
       "postedAt": "2026-08-10",
       "views": 94200,
-      "viewsAt": "2026-10-21T02:34:26.602Z",
+      "viewsAt": "2026-10-22T04:48:48.554Z",
       "poster": "/images/shop/7672413824099634463.jpg",
       "productIds": []
     },
@@ -5332,8 +5392,8 @@
       "pinned": false,
       "caption": "ugh I love! #goodamerican #cutejeans",
       "postedAt": "2026-08-09",
-      "views": 315800,
-      "viewsAt": "2026-10-21T02:34:26.560Z",
+      "views": 320700,
+      "viewsAt": "2026-10-22T04:48:47.775Z",
       "poster": "/images/shop/7672094021531077919.jpg",
       "productIds": [
         "1732492106240791450"
@@ -5344,8 +5404,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-08-08",
-      "views": 195900,
-      "viewsAt": "2026-10-21T02:34:26.432Z",
+      "views": 197200,
+      "viewsAt": "2026-10-22T04:48:47.660Z",
       "poster": "/images/shop/7671685821983984926.jpg",
       "productIds": [
         "1732503158095253527"
@@ -5357,7 +5417,7 @@
       "caption": "#workoutset #activewearforwomen",
       "postedAt": "2026-08-07",
       "views": 71600,
-      "viewsAt": "2026-10-21T02:34:27.470Z",
+      "viewsAt": "2026-10-22T04:48:48.597Z",
       "poster": "/images/shop/7671099532494638366.jpg",
       "productIds": [
         "1732477762178159263"
@@ -5368,8 +5428,8 @@
       "pinned": false,
       "caption": "#capri pants are soooo cute 🖤",
       "postedAt": "2026-08-06",
-      "views": 242200,
-      "viewsAt": "2026-10-21T02:34:27.481Z",
+      "views": 248200,
+      "viewsAt": "2026-10-22T04:48:48.591Z",
       "poster": "/images/shop/7671048476788083998.jpg",
       "productIds": [
         "1732466158386123082"
@@ -5381,7 +5441,7 @@
       "caption": "",
       "postedAt": "2026-08-06",
       "views": 67900,
-      "viewsAt": "2026-10-21T02:34:27.445Z",
+      "viewsAt": "2026-10-22T04:48:48.603Z",
       "poster": "/images/shop/7671042260049431839.jpg",
       "productIds": [
         "1732387656489668631"
@@ -5393,7 +5453,7 @@
       "caption": "5’6 125lbs wearing a small 🖤#activewearforwomen #workoutset #setactive",
       "postedAt": "2026-08-06",
       "views": 50500,
-      "viewsAt": "2026-10-21T02:34:27.631Z",
+      "viewsAt": "2026-10-22T04:48:49.459Z",
       "poster": "/images/shop/7671028921214848287.jpg",
       "productIds": [
         "1732477848203924127"
@@ -5404,7 +5464,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:29.317Z",
+      "viewsAt": "2026-10-22T04:48:50.538Z",
       "poster": null,
       "productIds": []
     },
@@ -5413,8 +5473,8 @@
       "pinned": false,
       "caption": "⭐️⭐️⭐️ boss gal stuff #lowrisebaggyjeans #lowrisegauchos #capris",
       "postedAt": "2026-08-06",
-      "views": 77200,
-      "viewsAt": "2026-10-21T02:34:28.570Z",
+      "views": 77300,
+      "viewsAt": "2026-10-22T04:48:49.697Z",
       "poster": "/images/shop/7670960679699893534.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5426,7 +5486,7 @@
       "caption": "🤎⭐️ #cider #romper #classystyle #classyoutfit",
       "postedAt": "2026-08-06",
       "views": 1200000,
-      "viewsAt": "2026-10-21T02:34:28.476Z",
+      "viewsAt": "2026-10-22T04:48:49.416Z",
       "poster": "/images/shop/7670960085836860702.jpg",
       "productIds": [
         "1729498429420377175"
@@ -5438,7 +5498,7 @@
       "caption": "5’6 | 125lbs | wearing a size small 🤍🖤",
       "postedAt": "2026-08-05",
       "views": 158200,
-      "viewsAt": "2026-10-21T02:34:28.670Z",
+      "viewsAt": "2026-10-22T04:48:49.454Z",
       "poster": "/images/shop/7670632637144255774.jpg",
       "productIds": [
         "1732477848203924127"
@@ -5449,8 +5509,8 @@
       "pinned": false,
       "caption": "⭐️⭐️ wearing a small #ciderclothing #lowrisebaggyjeans #gauchos #bermudashorts",
       "postedAt": "2026-08-05",
-      "views": 187500,
-      "viewsAt": "2026-10-21T02:34:30.249Z",
+      "views": 187600,
+      "viewsAt": "2026-10-22T04:48:50.467Z",
       "poster": "/images/shop/7670609742586187038.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5462,7 +5522,7 @@
       "caption": "perf for this weather too 🩶💛#2pcset #girlsummer #tiktokshopoutfit #cuteoutfits",
       "postedAt": "2026-08-05",
       "views": 36100,
-      "viewsAt": "2026-10-21T02:34:30.245Z",
+      "viewsAt": "2026-10-22T04:48:50.548Z",
       "poster": "/images/shop/7670606104690183455.jpg",
       "productIds": [
         "1732441283195015604"
@@ -5473,8 +5533,8 @@
       "pinned": false,
       "caption": "#revice #hoodie",
       "postedAt": "2026-08-04",
-      "views": 57800,
-      "viewsAt": "2026-10-21T02:34:30.306Z",
+      "views": 57900,
+      "viewsAt": "2026-10-22T04:48:50.571Z",
       "poster": "/images/shop/7670254205290024223.jpg",
       "productIds": []
     },
@@ -5483,8 +5543,8 @@
       "pinned": false,
       "caption": "#aelfricedenfamily #aelfricedenoutfits #barrelpants",
       "postedAt": "2026-08-04",
-      "views": 485200,
-      "viewsAt": "2026-10-21T02:34:30.402Z",
+      "views": 485800,
+      "viewsAt": "2026-10-22T04:48:51.365Z",
       "poster": "/images/shop/7670252790693842207.jpg",
       "productIds": [
         "1732423194888999522"
@@ -5495,8 +5555,8 @@
       "pinned": false,
       "caption": "#goodamericanjeans #lowrisebaggyjeans #cutejeans #kardashians",
       "postedAt": "2026-08-04",
-      "views": 65400,
-      "viewsAt": "2026-10-21T02:34:31.464Z",
+      "views": 65600,
+      "viewsAt": "2026-10-22T04:48:51.793Z",
       "poster": "/images/shop/7670248075180526878.jpg",
       "productIds": [
         "1732492106240791450"
@@ -5508,7 +5568,7 @@
       "caption": "wearing a small🩷💜💗",
       "postedAt": "2026-08-04",
       "views": 19400,
-      "viewsAt": "2026-10-21T02:34:31.468Z",
+      "viewsAt": "2026-10-22T04:48:52.623Z",
       "poster": "/images/shop/7669980084811353374.jpg",
       "productIds": [
         "1732156652862214993"
@@ -5519,8 +5579,8 @@
       "pinned": false,
       "caption": "5’6 125lbs wearing an xs 🤎#cider #romper #summeroutfits #cuteoutfit",
       "postedAt": "2026-08-03",
-      "views": 304200,
-      "viewsAt": "2026-10-21T02:34:31.284Z",
+      "views": 304300,
+      "viewsAt": "2026-10-22T04:48:51.445Z",
       "poster": "/images/shop/7669902973526412574.jpg",
       "productIds": [
         "1729498429420377175"
@@ -5531,8 +5591,8 @@
       "pinned": false,
       "caption": "I wear a small 🪻#2pieceset #capri #pilatesoutfit #activewearforwomen",
       "postedAt": "2026-08-03",
-      "views": 377200,
-      "viewsAt": "2026-10-21T02:34:31.375Z",
+      "views": 378400,
+      "viewsAt": "2026-10-22T04:48:51.428Z",
       "poster": "/images/shop/7669899037721644319.jpg",
       "productIds": [
         "1732387656489668631"
@@ -5544,7 +5604,7 @@
       "caption": "#edikted",
       "postedAt": "2026-08-03",
       "views": 32600,
-      "viewsAt": "2026-10-21T02:34:32.477Z",
+      "viewsAt": "2026-10-22T04:48:52.691Z",
       "poster": "/images/shop/7669882847322328350.jpg",
       "productIds": [
         "1732500411666960546"
@@ -5555,7 +5615,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:32.439Z",
+      "viewsAt": "2026-10-22T04:48:52.681Z",
       "poster": null,
       "productIds": []
     },
@@ -5564,8 +5624,8 @@
       "pinned": false,
       "caption": "⭐️⭐️⭐️ wearing a small #2pcset #cutecasualoutfit #summeroutfits #coolgirl",
       "postedAt": "2026-08-03",
-      "views": 179300,
-      "viewsAt": "2026-10-21T02:34:32.535Z",
+      "views": 179400,
+      "viewsAt": "2026-10-22T04:48:53.590Z",
       "poster": "/images/shop/7669881402300632350.jpg",
       "productIds": [
         "1732464677086925407"
@@ -5576,8 +5636,8 @@
       "pinned": false,
       "caption": "Literally need in every color 🖤⭐️ #capris #yogaset #2pcset #activewearforwomen #pilateoutfit",
       "postedAt": "2026-08-03",
-      "views": 86600,
-      "viewsAt": "2026-10-21T02:34:32.314Z",
+      "views": 86700,
+      "viewsAt": "2026-10-22T04:48:52.628Z",
       "poster": "/images/shop/7669861408082890015.jpg",
       "productIds": [
         "1732387656489668631"
@@ -5589,7 +5649,7 @@
       "caption": "#gaucho pants AND they’re low rise ⭐️⭐️⭐️ #lowrisepants #gauchos #coolgirlstyle #ootdinspo",
       "postedAt": "2026-08-03",
       "views": 88500,
-      "viewsAt": "2026-10-21T02:34:33.415Z",
+      "viewsAt": "2026-10-22T04:48:53.587Z",
       "poster": "/images/shop/7669847532494753054.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5600,8 +5660,8 @@
       "pinned": false,
       "caption": "🩷⭐️🌸 #impact #gymwearforwomen #activewearforwomen #gymfit",
       "postedAt": "2026-08-02",
-      "views": 92000,
-      "viewsAt": "2026-10-21T02:34:33.543Z",
+      "views": 92800,
+      "viewsAt": "2026-10-22T04:48:54.436Z",
       "poster": "/images/shop/7669495458590412062.jpg",
       "productIds": [
         "1732420352318869940"
@@ -5612,8 +5672,8 @@
       "pinned": false,
       "caption": "#revicedenim #lowrisejeans #revice #y2kjeans",
       "postedAt": "2026-08-01",
-      "views": 58400,
-      "viewsAt": "2026-10-21T02:34:33.377Z",
+      "views": 58500,
+      "viewsAt": "2026-10-22T04:48:53.572Z",
       "poster": "/images/shop/7669210327854239007.jpg",
       "productIds": [
         "1732001349715661227"
@@ -5624,8 +5684,8 @@
       "pinned": false,
       "caption": "🩶🤍 #edikted #minidress #casualdresses",
       "postedAt": "2026-08-01",
-      "views": 82600,
-      "viewsAt": "2026-10-21T02:34:33.438Z",
+      "views": 82700,
+      "viewsAt": "2026-10-22T04:48:53.569Z",
       "poster": "/images/shop/7669188131891039519.jpg",
       "productIds": [
         "1732500411666960546"
@@ -5636,8 +5696,8 @@
       "pinned": false,
       "caption": "🤍🖤🤍🖤 #2pcset #activewearforwomen #activewearfashion #pilatesoutfit #coolgirloutfit",
       "postedAt": "2026-08-01",
-      "views": 156400,
-      "viewsAt": "2026-10-21T02:34:34.613Z",
+      "views": 156500,
+      "viewsAt": "2026-10-22T04:48:55.635Z",
       "poster": "/images/shop/7669171236164963614.jpg",
       "productIds": [
         "1732477848203924127"
@@ -5648,8 +5708,8 @@
       "pinned": false,
       "caption": "#tiktokshopbacktoschool #flipflops #archies #casualflipflops",
       "postedAt": "2026-08-01",
-      "views": 427900,
-      "viewsAt": "2026-10-21T02:34:34.452Z",
+      "views": 431000,
+      "viewsAt": "2026-10-22T04:48:54.506Z",
       "poster": "/images/shop/7669147312525987102.jpg",
       "productIds": [
         "1730192886306738683"
@@ -5660,8 +5720,8 @@
       "pinned": false,
       "caption": "hot summer ootd ❤️‍🔥🌶️#caprioutfit #capris #summeroutfits #lowrise #coolgirlstyle",
       "postedAt": "2026-08-01",
-      "views": 156200,
-      "viewsAt": "2026-10-21T02:34:34.420Z",
+      "views": 156300,
+      "viewsAt": "2026-10-22T04:48:54.494Z",
       "poster": "/images/shop/7669100294273305886.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5672,8 +5732,8 @@
       "pinned": false,
       "caption": "I think I little bit of both but I LOVEEE these pants 🩵 #caprioutfit #capris #gauchos #lowrise #coolgirlstyle",
       "postedAt": "2026-08-01",
-      "views": 910200,
-      "viewsAt": "2026-10-21T02:34:34.461Z",
+      "views": 910500,
+      "viewsAt": "2026-10-22T04:48:54.558Z",
       "poster": "/images/shop/7669092071357140255.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5684,8 +5744,8 @@
       "pinned": false,
       "caption": "⭐️⭐️⭐️ #revice #revicedenim #revicejeans #ootd #coolgirl",
       "postedAt": "2026-07-31",
-      "views": 51500,
-      "viewsAt": "2026-10-21T02:34:35.599Z",
+      "views": 51700,
+      "viewsAt": "2026-10-22T04:48:55.365Z",
       "poster": "/images/shop/7668785123713715486.jpg",
       "productIds": [
         "1732248618598961579"
@@ -5697,7 +5757,7 @@
       "caption": "#lowrisebaggyjeans #capris #gauchos #cider",
       "postedAt": "2026-07-31",
       "views": 107100,
-      "viewsAt": "2026-10-21T02:34:35.728Z",
+      "viewsAt": "2026-10-22T04:48:56.481Z",
       "poster": "/images/shop/7668734948387343646.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5708,8 +5768,8 @@
       "pinned": false,
       "caption": "#edikted",
       "postedAt": "2026-07-30",
-      "views": 234600,
-      "viewsAt": "2026-10-21T02:34:35.526Z",
+      "views": 235100,
+      "viewsAt": "2026-10-22T04:48:55.415Z",
       "poster": "/images/shop/7668466899944049950.jpg",
       "productIds": [
         "1732500411666960546"
@@ -5720,8 +5780,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-07-30",
-      "views": 51300,
-      "viewsAt": "2026-10-21T02:34:35.450Z",
+      "views": 51400,
+      "viewsAt": "2026-10-22T04:48:55.378Z",
       "poster": "/images/shop/7668459970953858335.jpg",
       "productIds": [
         "1732500413267284130"
@@ -5732,8 +5792,8 @@
       "pinned": false,
       "caption": "wearing a size small ✨🤍 #capris #capripants #edikted #ediktedoncampus",
       "postedAt": "2026-07-30",
-      "views": 155600,
-      "viewsAt": "2026-10-21T02:34:36.631Z",
+      "views": 156100,
+      "viewsAt": "2026-10-22T04:48:57.332Z",
       "poster": "/images/shop/7668352846760267038.jpg",
       "productIds": [
         "1732500413267284130"
@@ -5744,8 +5804,8 @@
       "pinned": false,
       "caption": "#vacationdress #floraldress",
       "postedAt": "2026-07-30",
-      "views": 188200,
-      "viewsAt": "2026-10-21T02:34:36.585Z",
+      "views": 188300,
+      "viewsAt": "2026-10-22T04:48:56.529Z",
       "poster": "/images/shop/7668345926188092702.jpg",
       "productIds": [
         "1730860953510908783"
@@ -5756,8 +5816,8 @@
       "pinned": false,
       "caption": "omg I need more colors asap ⭐️⭐️⭐️ #gymoutfit #capris #gymgirl #gymfit",
       "postedAt": "2026-07-30",
-      "views": 69900,
-      "viewsAt": "2026-10-21T02:34:36.597Z",
+      "views": 70100,
+      "viewsAt": "2026-10-22T04:48:56.558Z",
       "poster": "/images/shop/7668140989915122975.jpg",
       "productIds": [
         "1732466158386123082"
@@ -5768,8 +5828,8 @@
       "pinned": false,
       "caption": "sooo cute and they’re on SALE  ⭐️⭐️⭐️ #revice #revicedenim #lowrisebaggyjeans #cutejeans",
       "postedAt": "2026-07-29",
-      "views": 117100,
-      "viewsAt": "2026-10-21T02:34:36.619Z",
+      "views": 118400,
+      "viewsAt": "2026-10-22T04:48:56.437Z",
       "poster": "/images/shop/7668076562251664670.jpg",
       "productIds": [
         "1731112807320687019"
@@ -5780,7 +5840,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:37.568Z",
+      "viewsAt": "2026-10-22T04:48:57.391Z",
       "poster": null,
       "productIds": []
     },
@@ -5789,8 +5849,8 @@
       "pinned": false,
       "caption": "🌶️❤️‍🔥⭐️it’s giving $kims !!! #2pcset #loungewear #comfyloungewear #loungewearoutfit #widelegloungepants",
       "postedAt": "2026-07-28",
-      "views": 163300,
-      "viewsAt": "2026-10-21T02:34:37.814Z",
+      "views": 163400,
+      "viewsAt": "2026-10-22T04:48:58.243Z",
       "poster": "/images/shop/7667725587053661470.jpg",
       "productIds": [
         "1731172622967935827"
@@ -5801,8 +5861,8 @@
       "pinned": false,
       "caption": "#ciderhaul #cider #ciderclothing #lowrisepants #capris",
       "postedAt": "2026-07-28",
-      "views": 284500,
-      "viewsAt": "2026-10-21T02:34:37.761Z",
+      "views": 284700,
+      "viewsAt": "2026-10-22T04:48:57.370Z",
       "poster": "/images/shop/7667477756359232799.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5813,8 +5873,8 @@
       "pinned": false,
       "caption": "& they’re on sale rn bless ⭐️ #revicedenim #revicepartner #revicejeans #revice #lowrisejeans",
       "postedAt": "2026-07-28",
-      "views": 229900,
-      "viewsAt": "2026-10-21T02:34:37.465Z",
+      "views": 230600,
+      "viewsAt": "2026-10-22T04:48:57.351Z",
       "poster": "/images/shop/7667472539928513823.jpg",
       "productIds": [
         "1732001354159985067"
@@ -5825,8 +5885,8 @@
       "pinned": false,
       "caption": "the PERFECT low rise omg #revicedenim #revicepartner #revicejeans #revice",
       "postedAt": "2026-07-28",
-      "views": 74300,
-      "viewsAt": "2026-10-21T02:34:38.666Z",
+      "views": 74700,
+      "viewsAt": "2026-10-22T04:48:58.437Z",
       "poster": "/images/shop/7667470008620010782.jpg",
       "productIds": [
         "1732001354159985067"
@@ -5838,7 +5898,7 @@
       "caption": "",
       "postedAt": "2026-07-28",
       "views": 94000,
-      "viewsAt": "2026-10-21T02:34:39.047Z",
+      "viewsAt": "2026-10-22T04:48:59.308Z",
       "poster": "/images/shop/7667467539714182430.jpg",
       "productIds": [
         "1731338017918783915"
@@ -5849,8 +5909,8 @@
       "pinned": false,
       "caption": "my fav ever ugh 🤍🩶🖤 #activewearforwomen #2pcset #pilatesoutfit #pilatesprincess #summeroutfits",
       "postedAt": "2026-07-27",
-      "views": 382200,
-      "viewsAt": "2026-10-21T02:34:38.733Z",
+      "views": 382300,
+      "viewsAt": "2026-10-22T04:48:58.275Z",
       "poster": "/images/shop/7667298484013370654.jpg",
       "productIds": [
         "1732474646024589982"
@@ -5861,8 +5921,8 @@
       "pinned": false,
       "caption": "the BEST & comfiest investment I’ve ever made literally thank you miss Kim k #skims #skimsrobe",
       "postedAt": "2026-07-27",
-      "views": 424100,
-      "viewsAt": "2026-10-21T02:34:38.692Z",
+      "views": 424700,
+      "viewsAt": "2026-10-22T04:48:58.266Z",
       "poster": "/images/shop/7667293976570989854.jpg",
       "productIds": [
         "1732434961058665317"
@@ -5873,8 +5933,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-07-27",
-      "views": 75000,
-      "viewsAt": "2026-10-21T02:34:39.870Z",
+      "views": 75100,
+      "viewsAt": "2026-10-22T04:48:59.236Z",
       "poster": "/images/shop/7667239796867140895.jpg",
       "productIds": [
         "1732474646024589982"
@@ -5885,8 +5945,8 @@
       "pinned": false,
       "caption": "#revicedenim #revice #summeroutfits #summermashup",
       "postedAt": "2026-07-27",
-      "views": 49700,
-      "viewsAt": "2026-10-21T02:34:40.139Z",
+      "views": 49900,
+      "viewsAt": "2026-10-22T04:48:59.293Z",
       "poster": "/images/shop/7667231578770230559.jpg",
       "productIds": [
         "1732418985698496939",
@@ -5898,8 +5958,8 @@
       "pinned": false,
       "caption": "#ciderhaul #pants #gauchos #capris #summerlooks",
       "postedAt": "2026-07-26",
-      "views": 198100,
-      "viewsAt": "2026-10-21T02:34:39.938Z",
+      "views": 198300,
+      "viewsAt": "2026-10-22T04:48:59.260Z",
       "poster": "/images/shop/7666858331213991199.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5911,7 +5971,7 @@
       "caption": "#lowrisepants #cider #summeroutfits",
       "postedAt": "2026-07-26",
       "views": 38400,
-      "viewsAt": "2026-10-21T02:34:40.503Z",
+      "viewsAt": "2026-10-22T04:49:00.211Z",
       "poster": "/images/shop/7666708275370413342.jpg",
       "productIds": [
         "1732437551334920279"
@@ -5922,8 +5982,8 @@
       "pinned": false,
       "caption": "",
       "postedAt": "2026-07-25",
-      "views": 94800,
-      "viewsAt": "2026-10-21T02:34:41.427Z",
+      "views": 95500,
+      "viewsAt": "2026-10-22T04:49:00.167Z",
       "poster": "/images/shop/7666584247888530719.jpg",
       "productIds": [
         "1732156652862214993"
@@ -5934,8 +5994,8 @@
       "pinned": false,
       "caption": "#womensfashion #romper",
       "postedAt": "2026-07-25",
-      "views": 244100,
-      "viewsAt": "2026-10-21T02:34:41.492Z",
+      "views": 244600,
+      "viewsAt": "2026-10-22T04:49:01.192Z",
       "poster": "/images/shop/7666259871095852318.jpg",
       "productIds": [
         "1731501128015516638"
@@ -5946,8 +6006,8 @@
       "pinned": false,
       "caption": "sooo soft and stretchy, wearing a small 🤍✨ #skimsdupe #romper",
       "postedAt": "2026-07-25",
-      "views": 210400,
-      "viewsAt": "2026-10-21T02:34:41.348Z",
+      "views": 211100,
+      "viewsAt": "2026-10-22T04:49:00.329Z",
       "poster": "/images/shop/7666251723333242143.jpg",
       "productIds": [
         "1731501128015516638"
@@ -5958,7 +6018,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:41.370Z",
+      "viewsAt": "2026-10-22T04:49:00.233Z",
       "poster": null,
       "productIds": []
     },
@@ -5979,7 +6039,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:42.378Z",
+      "viewsAt": "2026-10-22T04:49:01.138Z",
       "poster": null,
       "productIds": []
     },
@@ -5988,7 +6048,7 @@
       "pinned": false,
       "caption": "",
       "postedAt": "1970-01-01",
-      "viewsAt": "2026-10-21T02:34:42.401Z",
+      "viewsAt": "2026-10-22T04:49:01.135Z",
       "poster": null,
       "productIds": []
     },
@@ -5998,7 +6058,7 @@
       "caption": "",
       "postedAt": "2026-07-22",
       "views": 1300000,
-      "viewsAt": "2026-10-21T02:34:42.416Z",
+      "viewsAt": "2026-10-22T04:49:01.214Z",
       "poster": "/images/shop/7665201687048621342.jpg",
       "productIds": [
         "1732474740093981342"
@@ -7612,14 +7672,24 @@
   ],
   "catalog": [
     {
-      "id": "1732538908900626467",
-      "title": "Aoqta Women's 2-Piece Fitness Workout Set - Quick-Dry Off-Shoulder Long-Sleeve Top & Loose High-Waisted Ankle-Length Flared Pants (Size Up Recommended, Off Shoulder Tops, Workout Sets Women)",
-      "url": "https://shop.tiktok.com/us/pdp/aoqta-womens-2-piece-workout-set-gym-fitness-activewear/1732538908900626467?source=anchor",
-      "image": "/images/shop/p-1732538908900626467.jpg",
+      "id": "1732708826875072535",
+      "title": "MFVIM women’s two piece yoga set featuring a crossover V neck halter mock two piece long sleeve crop top and high waisted seven eighths length yoga leggings, soft nude feel fitness activewear set",
+      "url": "https://shop.tiktok.com/us/pdp/womens-yoga-set-mfvim-soft-long-sleeve-crop-top-leggings/1732708826875072535?source=anchor",
+      "image": "/images/shop/p-1732708826875072535.jpg",
       "category": "Sports & Outdoor",
-      "videoId": "7699184111046495519",
+      "videoId": "7699344646983437599",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "1729476876389094735",
+      "title": "【Restocked】PUFFIT STM-TEX Short One-Size Rain Jacket With Pleated Hem,Hooded Jacket,Waterproof Jacket,Women Jacket,Wide-Brim Hood,Adjustable Cuffs,Zips,Outdoor Sport,Windbreaker,Fall,Winter,Dog Walking,School Running,Stylish,Womenswear,2026 Shopping",
+      "url": "https://shop.tiktok.com/us/pdp/puffit-stm-tex-short-rain-jacket-waterproof-lightweight/1729476876389094735?source=anchor",
+      "image": "/images/shop/p-1729476876389094735.jpg",
+      "category": "Womenswear & Underwear",
+      "videoId": "7699301717770292511",
+      "handle": "partidaelena",
+      "firstSeen": "2026-10-22"
     },
     {
       "id": "1732531869259960343",
@@ -7627,7 +7697,37 @@
       "url": "https://shop.tiktok.com/us/pdp/mfvim-womens-strapless-yoga-set-shaping-bra-shorts/1732531869259960343?source=anchor",
       "image": "/images/shop/p-1732531869259960343.jpg",
       "category": "Sports & Outdoor",
-      "videoId": "7699144984058006814",
+      "videoId": "7699288653494897951",
+      "handle": "partidaelena",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "1732749183816537082",
+      "title": "EHPlabs OxyShred No Scoop Stack – Energy Gummies + Creatine Gummies | Chewable Energy & Strength Support",
+      "url": "https://shop.tiktok.com/us/pdp/1732749183816537082?source=anchor",
+      "image": "/images/shop/p-1732749183816537082.jpg",
+      "category": "Health",
+      "videoId": "7699279650681343245",
+      "handle": "partidaelena",
+      "firstSeen": "2026-10-22"
+    },
+    {
+      "id": "1732538005269942470",
+      "title": "Tower 28 Swipe Serum Foundation",
+      "url": "https://shop.tiktok.com/us/pdp/tower-28-swipe-serum-foundation-sensitive-skin-friendly/1732538005269942470?source=anchor",
+      "image": "/images/shop/p-1732538005269942470.jpg",
+      "category": "Beauty & Personal Care",
+      "videoId": "7699266939998326046",
+      "handle": "partidaelena",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "1732538908900626467",
+      "title": "Aoqta Women's 2-Piece Fitness Workout Set - Quick-Dry Off-Shoulder Long-Sleeve Top & Loose High-Waisted Ankle-Length Flared Pants (Size Up Recommended, Off Shoulder Tops, Workout Sets Women)",
+      "url": "https://shop.tiktok.com/us/pdp/aoqta-womens-2-piece-workout-set-gym-fitness-activewear/1732538908900626467?source=anchor",
+      "image": "/images/shop/p-1732538908900626467.jpg",
+      "category": "Sports & Outdoor",
+      "videoId": "7699184111046495519",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
     },
@@ -7738,16 +7838,6 @@
       "image": "/images/shop/p-1732422282439398087.jpg",
       "category": "Womenswear & Underwear",
       "videoId": "7698981641728937246",
-      "handle": "partidaelena",
-      "firstSeen": "2026-10-20"
-    },
-    {
-      "id": "1732708826875072535",
-      "title": "MFVIM women’s two piece yoga set featuring a crossover V neck halter mock two piece long sleeve crop top and high waisted seven eighths length yoga leggings, soft nude feel fitness activewear set",
-      "url": "https://shop.tiktok.com/us/pdp/womens-yoga-set-mfvim-soft-long-sleeve-crop-top-leggings/1732708826875072535?source=anchor",
-      "image": "/images/shop/p-1732708826875072535.jpg",
-      "category": "Sports & Outdoor",
-      "videoId": "7698978049508822302",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
     },
@@ -7872,20 +7962,20 @@
       "firstSeen": "2026-10-20"
     },
     {
-      "id": "1732443969355288690",
-      "title": "athluna LunaLift Micro Sports Bra for Yoga & Low-Impact Workouts, Light Support, No Padding, Minimalist Sculpting Stretch Fitted Design, Athleisure Training for Studio & Everyday Layering",
-      "url": "https://shop.tiktok.com/us/pdp/1732443969355288690?source=anchor",
-      "image": "/images/shop/p-1732443969355288690.jpg",
+      "id": "1732444161695780978",
+      "title": "Athluna LunaAiry High Waist Seamless Active Gym Shorts - 4 in Inseam, Tight Fit, No Excess Bulk Sports Bottoms for Workout, Size S",
+      "url": "https://shop.tiktok.com/us/pdp/athluna-lunaairy-high-waist-seamless-active-shorts-4-inseam/1732444161695780978?source=anchor",
+      "image": "/images/shop/p-1732444161695780978.jpg",
       "category": "Sports & Outdoor",
       "videoId": "7698476847541030174",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
     },
     {
-      "id": "1732444161695780978",
-      "title": "Athluna LunaAiry High Waist Seamless Active Gym Shorts - 4 in Inseam, Tight Fit, No Excess Bulk Sports Bottoms for Workout, Size S",
-      "url": "https://shop.tiktok.com/us/pdp/athluna-lunaairy-high-waist-seamless-active-shorts-4-inseam/1732444161695780978?source=anchor",
-      "image": "/images/shop/p-1732444161695780978.jpg",
+      "id": "1732443969355288690",
+      "title": "athluna LunaLift Micro Sports Bra for Yoga & Low-Impact Workouts, Light Support, No Padding, Minimalist Sculpting Stretch Fitted Design, Athleisure Training for Studio & Everyday Layering",
+      "url": "https://shop.tiktok.com/us/pdp/1732443969355288690?source=anchor",
+      "image": "/images/shop/p-1732443969355288690.jpg",
       "category": "Sports & Outdoor",
       "videoId": "7698476847541030174",
       "handle": "partidaelena",
@@ -7998,16 +8088,6 @@
       "image": "/images/shop/p-1731748247366767371.jpg",
       "category": "Womenswear & Underwear",
       "videoId": "7698427568009121054",
-      "handle": "partidaelena",
-      "firstSeen": "2026-10-20"
-    },
-    {
-      "id": "1732538005269942470",
-      "title": "Tower 28 Swipe Serum Foundation",
-      "url": "https://shop.tiktok.com/us/pdp/tower-28-swipe-serum-foundation-sensitive-skin-friendly/1732538005269942470?source=anchor",
-      "image": "/images/shop/p-1732538005269942470.jpg",
-      "category": "Beauty & Personal Care",
-      "videoId": "7698426880499731742",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
     },
@@ -8402,16 +8482,6 @@
       "firstSeen": "2026-10-20"
     },
     {
-      "id": "1732159788400677868",
-      "title": "Von Dutch Roxy Lady Women's Fitted-Straight-Flared Rayon-Spandex Slip Leg Pants - Women's Sports Clothing, All Styles",
-      "url": "https://shop.tiktok.com/us/pdp/von-dutch-yoga-bottoms-mid-rise-fitted-straight-leg-pant/1732159788400677868?source=anchor",
-      "image": "/images/shop/p-1732159788400677868.jpg",
-      "category": "Sports & Outdoor",
-      "videoId": "7695941439687068959",
-      "handle": "partidaelena",
-      "firstSeen": "2026-10-20"
-    },
-    {
       "id": "1732159785925317612",
       "title": "Von Dutch Roxy Fitted Women's Athletic Tops - Brand Clothing, Gym Tops, Graphic Tops, All Styles for Yoga, Gym Use",
       "url": "https://shop.tiktok.com/us/pdp/yoga-top-rayon-spandex-blend-long-sleeves-front-zipper/1732159785925317612?source=anchor",
@@ -8420,6 +8490,16 @@
       "videoId": "7695941439687068959",
       "handle": "partidaelena",
       "firstSeen": "2026-10-21"
+    },
+    {
+      "id": "1732159788400677868",
+      "title": "Von Dutch Roxy Lady Women's Fitted-Straight-Flared Rayon-Spandex Slip Leg Pants - Women's Sports Clothing, All Styles",
+      "url": "https://shop.tiktok.com/us/pdp/von-dutch-yoga-bottoms-mid-rise-fitted-straight-leg-pant/1732159788400677868?source=anchor",
+      "image": "/images/shop/p-1732159788400677868.jpg",
+      "category": "Sports & Outdoor",
+      "videoId": "7695941439687068959",
+      "handle": "partidaelena",
+      "firstSeen": "2026-10-20"
     },
     {
       "id": "1732588646908792919",
@@ -9682,21 +9762,21 @@
       "firstSeen": "2026-10-20"
     },
     {
-      "id": "1730787952662778380",
-      "title": "Women's Graphic Print Asymmetrical Neck Tee, Fashion Chic Casual Loose Fit Oversized Vintage Graphic T-Shirt for Daily Vacation Outdoor, Ladies Clothes for Summer, Womenswear, Streetwear, Casual Breathable Comfy Top",
-      "url": "https://shop.tiktok.com/us/pdp/graphic-print-asymmetrical-neck-tee-by-women-s-fashion-casual-for-summer/1730787952662778380?source=anchor",
-      "image": "/images/shop/p-1730787952662778380.jpg",
-      "category": "Womenswear & Underwear",
-      "videoId": "7662424692564741406",
-      "handle": "partidaelena",
-      "firstSeen": "2026-10-20"
-    },
-    {
       "id": "1732424094002811238",
       "title": "American Thrift Wide Leg Pants Washed Pink",
       "url": "https://shop.tiktok.com/us/pdp/american-thrift-wide-leg-pants-washed-pink-loiter-brand/1732424094002811238?source=anchor",
       "image": "/images/shop/p-1732424094002811238.jpg",
       "category": "Menswear & Underwear",
+      "videoId": "7662424692564741406",
+      "handle": "partidaelena",
+      "firstSeen": "2026-10-20"
+    },
+    {
+      "id": "1730787952662778380",
+      "title": "Women's Graphic Print Asymmetrical Neck Tee, Fashion Chic Casual Loose Fit Oversized Vintage Graphic T-Shirt for Daily Vacation Outdoor, Ladies Clothes for Summer, Womenswear, Streetwear, Casual Breathable Comfy Top",
+      "url": "https://shop.tiktok.com/us/pdp/graphic-print-asymmetrical-neck-tee-by-women-s-fashion-casual-for-summer/1730787952662778380?source=anchor",
+      "image": "/images/shop/p-1730787952662778380.jpg",
+      "category": "Womenswear & Underwear",
       "videoId": "7662424692564741406",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
@@ -9802,20 +9882,20 @@
       "firstSeen": "2026-10-20"
     },
     {
-      "id": "1732297227023913047",
-      "title": "Cider Streetwear Low Rise Metal Detail Washed Denim Wide Leg Capri Jeans",
-      "url": "https://shop.tiktok.com/us/pdp/cider-washed-denim-low-rise-metal-detail-wide-leg-capri-jeans/1732297227023913047?source=anchor",
-      "image": "/images/shop/p-1732297227023913047.jpg",
+      "id": "1732295188543345007",
+      "title": "Cicy Bell Women's Summer Wrap Shortleeve Top - Soft Viscose, Boat Neck, Tie Back, Cinched Waist, Print, Cute Tops, Shirts, Women's Clothes",
+      "url": "https://shop.tiktok.com/us/pdp/cicy-bell-womens-summer-wrap-top-cross-tie-design-soft-viscose/1732295188543345007?source=anchor",
+      "image": "/images/shop/p-1732295188543345007.jpg",
       "category": "Womenswear & Underwear",
       "videoId": "7657959140383378718",
       "handle": "partidaelena",
       "firstSeen": "2026-10-20"
     },
     {
-      "id": "1732295188543345007",
-      "title": "Cicy Bell Women's Summer Wrap Shortleeve Top - Soft Viscose, Boat Neck, Tie Back, Cinched Waist, Print, Cute Tops, Shirts, Women's Clothes",
-      "url": "https://shop.tiktok.com/us/pdp/cicy-bell-womens-summer-wrap-top-cross-tie-design-soft-viscose/1732295188543345007?source=anchor",
-      "image": "/images/shop/p-1732295188543345007.jpg",
+      "id": "1732297227023913047",
+      "title": "Cider Streetwear Low Rise Metal Detail Washed Denim Wide Leg Capri Jeans",
+      "url": "https://shop.tiktok.com/us/pdp/cider-washed-denim-low-rise-metal-detail-wide-leg-capri-jeans/1732297227023913047?source=anchor",
+      "image": "/images/shop/p-1732297227023913047.jpg",
       "category": "Womenswear & Underwear",
       "videoId": "7657959140383378718",
       "handle": "partidaelena",
